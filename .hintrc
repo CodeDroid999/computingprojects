@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "meta-viewport": "off",
+    "axe/aria": [
+      "default",
+      {
+        "aria-allowed-attr": "off"
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off"
+      }
+    ],
+    "disown-opener": "off",
+    "no-inline-styles": "off"
+  }
+}
