@@ -1,0 +1,956 @@
+﻿<!DOCTYPE html>
+<html>
+<head profile="https://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>How to build a food delivery app like Ubereats and Deliveroo | Xicom</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="WordPress 5.1.16">
+<link rel="shortcut icon" href="../wp-content/themes/grid_focus/gridfocus/images/favicon/favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="Xicom Blog | Software, Mobile App, Web Application Development RSS Feed" href="../feed/index.htm">
+
+<link rel="stylesheet" href="../../bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="../../css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<link href="../../css-1?family=Lato:300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.xicom.biz/blog/wp-content/themes/grid_focus/gridfocus/css/fonts/font-awesome-4/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="../wp-content/themes/grid_focus/gridfocus/css/fonts/stylesheet.css">
+<link type="text/css" rel="stylesheet" href="../wp-content/themes/grid_focus/gridfocus/css/reset.css">
+<link rel="stylesheet" href="../wp-content/themes/grid_focus/gridfocus/style.css" type="text/css" media="screen">
+<link type="text/css" rel="stylesheet" href="../wp-content/themes/grid_focus/gridfocus/css/responsive.css">
+<script src="../../ajax/libs/jquery/1.10.2/jquery.min.js" type="2e9e2d106d1000cbc4d5468a-text/javascript"></script>
+<script src="../wp-content/themes/grid_focus/gridfocus/js/owl.carousel.js" type="2e9e2d106d1000cbc4d5468a-text/javascript"></script>
+<script src="../wp-content/themes/grid_focus/gridfocus/js/custom.js" type="2e9e2d106d1000cbc4d5468a-text/javascript"></script>
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Xicom Blog | Software, Mobile App, Web Application Development &raquo; How to build a food delivery app like Ubereats and Deliveroo Comments Feed" href="feed/index.htm">
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.xicom.biz\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.16"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55358,56760,9792,65039],[55358,56760,8203,9792,65039])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../wp-includes/css/dist/block-library/style.min.css?ver=5.1.16" type="text/css" media="all">
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript" src="../wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript" src="../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<link rel="https://api.w.org/" href="../wp-json/index.htm">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.xicom.biz/blog/wp-includes/wlwmanifest.xml">
+<link rel="prev" title="How To Make A Successful Messaging App In 2021?" href="../make-a-successful-messaging-app/index.htm">
+<link rel="next" title="How Much Does It Cost To Develop a Gaming App?" href="../cost-to-create-a-game-app/index.htm">
+<meta name="generator" content="WordPress 5.1.16">
+<link rel="shortlink" href="index.htm?p=5132">
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed-10?url=https%3A%2F%2Fwww.xicom.biz%2Fblog%2Fbuild-a-food-delivery-app-like-ubereats%2F">
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed-11?url=https%3A%2F%2Fwww.xicom.biz%2Fblog%2Fbuild-a-food-delivery-app-like-ubereats%2F&#038;format=xml">
+
+<link rel="canonical" href="index.htm">
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.xicom.biz/blog/build-a-food-delivery-app-like-ubereats/">
+<meta property="og:title" content="How to build a food delivery app like Ubereats and Deliveroo">
+<meta property="og:description" content="In a world, as ">
+<meta property="og:site_name" content="Xicom Blog | Software, Mobile App, Web Application Development">
+<meta property="og:image" content="https://www.xicom.biz/blog/wp-content/uploads/2020/08/feature_3.png">
+<meta property="og:image:alt" content="">
+<meta property="og:image:width" content="900">
+<meta property="og:image:height" content="642">
+<meta itemscope="" itemtype="article">
+<meta itemprop="description" content="In a world, as ">
+<meta itemprop="image" content="https://www.xicom.biz/blog/wp-content/uploads/2020/08/feature_3.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.xicom.biz/blog/build-a-food-delivery-app-like-ubereats/">
+<meta name="twitter:title" content="How to build a food delivery app like Ubereats and Deliveroo">
+<meta name="twitter:description" content="In a world, as ">
+<meta name="twitter:image" content="https://www.xicom.biz/blog/wp-content/uploads/2020/08/feature_3.png">
+<style type="text/css" id="wp-custom-css">
+			.table-image.table {
+    border-left: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    margin: 20px auto;
+}
+
+.table-image.table th, .table-image.table td {
+    padding: 5px 15px;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #758495;
+    border-right: 1px solid #dee2e6;
+}
+
+.table-image.table th {
+    background: #022a5e;
+    color: #fff;
+}
+
+@media screen and (max-width:567px){
+	.table-image.table tr th, .table-image.table tr td {font-size: 13px;}
+/*	.table-image.table tr th, .table-image.table tr td { flex: 0 0 100%; height: 50%; font-size: 13px; padding: 5px 10px; width: 150px; display: flex; align-items: center; justify-content: center;}
+
+.table-image.table tbody tr { display: flex; flex-wrap: wrap; height: 100%;}
+
+.table-image.table tbody, .table-image.table thead { display: flex;}
+.table-image.table { display:flex; overflow:auto;}
+.table-image.table thead {    position: sticky; left: 0;}
+	.table-image.table tr th {border-bottom: 1px solid #909ba8; border-top:0;}*/
+}
+		</style>
+
+<script async="" src="../../gtag/js-1?id=UA-25100098-3" type="2e9e2d106d1000cbc4d5468a-text/javascript"></script>
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+//   gtag('config', 'UA-25100098-3');
+  gtag('config', 'UA-25100098-1', { 'optimize_id': 'GTM-KCG4WZC'});
+</script>
+</head>
+<body>
+<script type="2e9e2d106d1000cbc4d5468a-application/javascript">
+	<!--
+	function popitup(url) {
+		newwindow=window.open(url,'name','height=465,width=460,scrollbars=yes,menubar=no,toolbar=no,resizable=false,location=no');
+
+		if (window.focus) {newwindow.focus()}
+		return false;
+	}
+	// -->
+</script>
+
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript" language="Javascript" src="../../js/validation.js"></script>
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript">
+//declare function
+function validateContact()
+{
+	var error = false;	
+	if (isEmpty('form2', 'contactPerson1'))
+	{
+		$("#contactPerson1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#contactPerson1").removeClass('error');
+		//error = false;
+	}
+	if (isEmpty('form2', 'email1'))
+	{
+		$("#email1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#email1").removeClass('error');
+		//error = false;
+	}
+	if (isEmpty('form2', 'phone1'))
+	{
+		$("#phone1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#phone1").removeClass('error');
+		//error = false;
+	}
+	
+	
+	if (isEmpty('form2', 'description1'))
+	{
+		$("#description1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#description1").removeClass('error');
+		//error = false;
+	}	
+
+	if (error)
+	{		
+		return false;
+	}
+	else
+	{
+		$("#form2").submit();
+	}
+}
+</script>
+
+<div class="container-fluid header-wht">
+<header class="logo-navbar">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+<div class="header-container">
+<div class="inner-overlay"> </div>
+<div class="row header-row">
+<div class="navbar-header col-sm-2">
+<a class="navbar-toggle">
+<div class="sr-only"><div class="header-heading">Software, Mobile App, Web Application Development Company, Services India, USA</div></div>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a href="../../index.htm" class="logo"></a>
+</div>
+<div class="col-sm-10 right-menu">
+<nav id="slidemenu">
+<div class="inner-menu">
+<div class="navbar-toggle cross">
+<span class="first"></span>
+<span class="second"></span>
+</div>
+<ul id="navigation" class="nav navbar-nav">
+<li class="nav-item"> <a href="../../services/index.htm">Services</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li> <a href="../../services/web-development/index.htm"> Web Development </a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../services/ecommerce-development/index.htm"> Ecommerce Development </a></li>
+<li> <a href="../../services/content-management-system/index.htm"> Content Management System (CMS) </a></li>
+</ul>
+</li>
+<li> <a href="../../services/mobile-app-development/index.htm"> Mobile App Development </a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../services/android-app-development/index.htm"> Android App Development </a></li>
+<li> <a href="../../services/ios-app-development/index.htm"> iOS App Development </a></li>
+
+<li> <a href="../../services/react-native-app-development/index.htm"> React Native App Development </a></li>
+<li> <a href="../../services/flutter-app-development/index.htm"> Flutter App Development </a></li>
+<li> <a href="../../services/augmented-reality/index.htm"> Augmented Reality / VR </a></li>
+</ul>
+</li>
+<li> <a href="../../services/software-development/index.htm"> Software Development </a> </li>
+<li> <a href="../../services/consulting/index.htm"> IT Consulting Services</a></li>
+<li> <a href="../../services/quality-assurance-testing/index.htm"> Quality Assurance &amp; Testing </a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../latest-thinking/index.htm">Latest Thinking</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../latest-thinking/big-data-analytics/index.htm">Big Data &amp; Analytics</a></li>
+<li><a href="../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"><a href="../../industries/index.htm">Industries</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../industries/automotive/index.htm">Automotive</a></li>
+<li><a href="../../industries/entertainment/index.htm"> Media and Entertainment </a></li>
+<li><a href="../../industries/healthcare/index.htm"> Healthcare </a></li>
+<li><a href="../../industries/manufacturing/index.htm"> Manufacturing </a></li>
+<li><a href="../../industries/finance/index.htm"> Banking and Finance </a></li>
+<li><a href="../../industries/real-estate/index.htm"> Real Estate </a></li>
+<li><a href="../../industries/retail/index.htm"> Retail and Ecommerce </a></li>
+<li><a href="../../industries/logistics/index.htm"> Logistics and Transportation </a></li>
+<li><a href="../../industries/travel/index.htm"> Travel and Tourism </a></li>
+<li><a href="../../industries/education/index.htm"> Education and E-Learning </a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../solutions/index.htm">Solutions</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../solutions/technologies/index.htm"> Technologies </a>
+<ul class="sub-menu inner-sub">
+<li><a href="../../offerings/mobile-app-development/index.htm" title="Mobile App Development"> Mobile App Development </a></li>
+<li><a href="../../offerings/android-development/index.htm" title="Android App Development"> Android App Development </a></li>
+<li><a href="../../offerings/iphone-development/index.htm" title="iOS App Development"> iOS App Development </a></li>
+
+<li> <a href="../../services/react-native-app-development/index.htm"> React Native App Development </a></li>
+<li> <a href="../../services/flutter-app-development/index.htm"> Flutter App Development </a></li>
+<li><a href="../../offerings/java-development/index.htm" title="Java Development"> Java Development </a></li>
+<li><a href="../../offerings/asp.net-development/index.htm" title="ASP.NET Development"> ASP.NET Development </a></li>
+<li><a href="../../offerings/php-development/index.htm" title="PHP Development"> PHP Development </a></li>
+<li><a href="../../offerings/magento-development/index.htm" title="Magento Development"> Magento Development </a></li>
+<li><a href="../../offerings/ecommerce-development/index.htm" title="Ecommerce Development"> Ecommerce Development </a></li>
+<li><a href="../../offerings/web-development/index.htm" title="Web Development"> Web Development </a></li>
+<li><a href="../../offerings/software-development/index.htm" title="Software Development"> Software Development </a></li>
+</ul>
+</li>
+<li><a href="../../solutions/hire-developers/index.htm">Hire Developers</a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../offerings/hire-mobile-developers/index.htm" title="Hire Mobile App Developers">Hire Mobile App Developers</a></li>
+<li><a href="../../offerings/hire-android-developers/index.htm" title="Hire Android App Developers">Hire Android App Developers</a></li>
+<li> <a href="../../offerings/hire-iphone-developers/index.htm" title="Hire iPhone App Developers">Hire iOS App Developers</a></li>
+
+<li><a href="../../offerings/hire-react-native-developers/index.htm" title="Hire React Native Developers">Hire React Native Developers</a></li>
+<li> <a href="../../offerings/hire-flutter-developers/index.htm" title="Hire Flutter App Developers">Hire Flutter App Developers</a></li>
+<li> <a href="../../offerings/hire-java-programmers/index.htm" title="Hire Java Developers">Hire Java Developers</a></li>
+<li><a href="../../offerings/hire-asp.net-programmers/index.htm" title="Hire ASP.NET Developers">Hire ASP.NET Developers</a></li>
+<li> <a href="../../offerings/hire-php-programmers/index.htm" title="Hire PHP Developers">Hire PHP Developers</a></li>
+<li> <a href="../../offerings/hire-magento-developers/index.htm" title="Hire Magento Developers">Hire Magento Developers</a></li>
+<li> <a href="../../offerings/hire-ecommerce-developers/index.htm" title="Hire Ecommerce Developers">Hire Ecommerce Developers</a></li>
+<li> <a href="../../offerings/hire-web-developers/index.htm" title="Hire Web Developers">Hire Web Developers</a></li>
+<li> <a href="../../offerings/hire-software-developers/index.htm" title="Hire Software Developers">Hire Software Developers</a></li>
+</ul>
+</li>
+<li><a href="../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../corporate/index.htm">Corporate</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../testimonials/index.htm">Testimonials</a></li>
+<li><a href="../index.htm">Blog</a></li>
+<li><a href="../../careers/index.htm">Careers</a></li>
+<li><a href="../../contact/index.htm">Contact Us</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item contact-num"><a href="tel:+1.408.878.3255">+1.408.878.3255</a></li>
+</ul>
+</div>
+</nav>
+<div class="fr"><a href="../../contact/index.htm" class="contact-number">Get Free Estimation</a></div>
+<div class="call-circle"><a class="calling" href="tel:+1.408.878.3255"> </a></div>
+<div class="nav-menu">
+<span> </span>
+<span class="right-ar"> </span>
+<span> </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="full-screen-menu section fadeIn">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-7 menu-content">
+<div class="menu-title">
+Inspire The <span class="blueTxt">Next.</span>
+</div>
+<a href="../../contact/index.htm" class="red-btn"><div class="circle-dot wht-circle"> </div>Get Free Estimation</a>
+</div>
+<div class="col-sm-5 right-menu accordion" id="accordionExample1">
+<ul class="side-navigation">
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#serviceOne" aria-expanded="true" aria-controls="serviceOne">
+<span class="menu-link">Services</span>
+</div>
+<div id="serviceOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../services/index.htm">Overview</a></li>
+<li><a href="../../services/web-development/index.htm">Web Development</a></li>
+<li><a href="../../services/mobile-app-development/index.htm">Mobile App Development</a></li>
+<li><a href="../../services/software-development/index.htm">Software Development</a></li>
+<li><a href="../../services/consulting/index.htm">IT Consulting </a></li>
+<li> <a href="../../services/quality-assurance-testing/index.htm"> Quality Assurance &amp; Testing </a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#latestThink" aria-expanded="true" aria-controls="latestThink">
+<span class="menu-link">Latest Thinking</span>
+</div>
+<div id="latestThink" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../latest-thinking/index.htm">Overview</a></li>
+<li><a href="../../latest-thinking/big-data-analytics/index.htm">Big Data &amp; Analytics</a></li>
+<li><a href="../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</li>
+<li><a href="../../industries/index.htm">Industries</a></li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#solutionsSec" aria-expanded="true" aria-controls="solutionsSec">
+<span class="menu-link">Solutions</span>
+</div>
+<div id="solutionsSec" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../solutions/index.htm">Overview</a></li>
+<li><a href="../../solutions/technologies/index.htm">Technologies</a></li>
+<li><a href="../../solutions/hire-developers/index.htm">Hire Developers</a></li>
+<li><a href="../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#corporateSec" aria-expanded="true" aria-controls="corporateSec">
+<span class="menu-link">Corporate</span>
+</div>
+<div id="corporateSec" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../corporate/index.htm">Explore Xicom</a></li>
+<li><a href="../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../testimonials/index.htm">Testimonials</a></li>
+<li><a href="../../careers/index.htm">Careers</a></li>
+<li><a href="../../contact/index.htm">Contact Us</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="office-sec">
+<div class="">
+<div class="row">
+<div class="col">
+<div class="title"> OFFICES </div>
+</div>
+<div class="col">
+<p> 18 Bartol Street #1155 <br>
+San Francisco, California 94133 <br>
+United States. <br>
+Phone +1.408.878.3255 </p>
+</div>
+<div class="col">
+<p> 303-10 Opal Tower, Business <br>
+Bay Dubai, United <br>
+Arab Emirates. <br>
+Phone +971.529144795 </p>
+</div>
+<div class="col main-head">
+<p> C-1/134, Janak Puri <br>
+New Delhi <br>
+110058 India. <br>
+Phone +91.11.25502616 </p>
+</div>
+<div class="col">
+<div class="social-icons">
+<a href="https://www.facebook.com/xicomtechnologies" class="fb-icon" target="_blank"></a>
+<a href="https://www.twitter.com/xicomtech" class="tw-icon" target="_blank"></a>
+<a href="https://www.linkedin.com/company/xicom-technologies-ltd/" class="lnkd-icon" target="_blank"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section inner-banners blog-banner newupdate">
+<div class="container-fluid">
+<div class="banner-heading">
+<span class="red-text">Insights</span> for Digital Transformation
+</div>
+</div>
+</div>
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript">
+	$(document).ready(function(){
+
+		$('link:last').after('<!--[if IE 9]><link href="https://www.xicom.biz/css/ie9.css" rel="stylesheet" type="text/css" /><![endif]-->');
+	})
+</script>
+<div id="wrapper">
+<div class="outer">
+
+<script src="../../bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" type="2e9e2d106d1000cbc4d5468a-text/javascript"></script>
+<div id="filler" class="fix gry-bg single-page-ms">
+<div id="innerfill" class="section">
+<div class="container-fluid">
+<div class="row mr0">
+<div class="col-sm-9 left-blog">
+<div id="mainColumn" class="fix"><a name="main"></a>
+<div id="post-5132" class="post">
+<div class="postMeta fix">
+<p class="container">
+<span class="date">Jun 16, 2021</span>
+<span class="categ-link"> <a href="../category/mobile-app-development/index.htm" rel="category tag">Mobile App Development</a> </span>
+</p>
+</div>
+<h2><a href="index.htm" title="How to build a food delivery app like Ubereats and Deliveroo">How to build a food delivery app like Ubereats and Deliveroo</a></h2>
+<div class="entry">
+<figure class="wp-block-image"><img src="../wp-content/uploads/2020/08/feature_3.png" alt="How to build a food delivery app like Ubereats and Deliveroo" class="wp-image-5134" srcset="../wp-content/uploads/2020/08/feature_3.png 900w, ../wp-content/uploads/2020/08/feature_3-300x214.png 300w, ../wp-content/uploads/2020/08/feature_3-768x548.png 768w" sizes="(max-width: 900px) 100vw, 900px"></figure>
+<p>In a world, as occupied as today, it is comfort and prime significance for any sort of customer, in any business classification to go digital. Truth be told, 60% of US customers request delivery or takeout once every week. A perfect assistance today needs to offer the opportunity of the decision to the buyer, flexibility to fit into the tight timetable of the customer, incredible usability, and a proportion of care.&nbsp;<br></p>
+<p><strong>With the new online platforms making inroads around the world, the food-delivery market is in the midst of dramatic channel migration. We expect online delivery to grow by 25.0 percent per year from 2015 to 2018 in key markets, after which it will taper off to 14.9 percent per year until 2020</strong></p>
+<div class="wp-block-image"><figure class="aligncenter"><img src="../wp-content/uploads/2020/08/graph.png" alt="" class="wp-image-5135" srcset="../wp-content/uploads/2020/08/graph.png 510w, ../wp-content/uploads/2020/08/graph-300x261.png 300w" sizes="(max-width: 510px) 100vw, 510px"><figcaption> <strong>(Image Source: <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-changing-market-for-food-delivery" target="_blank" rel="noreferrer noopener nofollow" aria-label=" (opens in a new tab)">Mckinsey and Company</a>)</strong> </figcaption></figure></div>
+<p>As indicated by Business Insider (an American budgetary and business news site), the food delivery business is one of the quickest developing enterprises in 2020 and anticipated to be worth over $38 billion before the year&#8217;s over. In the event that you need a bit of that advertising, at that point, it&#8217;s an ideal opportunity to bounce in on the pattern or escape by the current.</p>
+<p><strong>The expense of making such an application relies upon three variables:&nbsp;<br></strong></p>
+<ul><li>plans of action (aggregators, coordination stages, cloud kitchens);&nbsp;</li><li>usefulness (enlistment, applications, installment, dispatch following, and so on.);&nbsp;</li><li>what&#8217;s more, engineers&#8217; hourly rates (dollars every hour).&nbsp;</li></ul>
+<p>Food requesting isn&#8217;t something new. On-delivery applications have made requesting food considerably more consistent, quicker, and advantageous. In this manner, the food delivery application industry is settled. By 2020, the business is assessed to reach $32 billion.&nbsp;<br></p>
+<p>Therefore we here present you with a full guide and how you can<a href="index.htm" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)"> create an app like UberEats or Deliveroo</a>. But first, let us understand some very important things.</p>
+<h2>Why are People Using Food Delivery Apps?&nbsp;<br></h2>
+<p>When in the present way of life individuals request food on the web, then again it turns into an inquiry for the individuals who don&#8217;t utilize these applications. They normally ask what is the need to utilize an online application, in the event that you can visit the café and can have newly arranged food? Things being what they are, there are some primary concerns talked about why individuals are utilizing these applications? What is the need? Furthermore, numerous others with <a href="../../offerings/mobile-app-development/index-1.htm?utm_source=delivery%20app%20like%20UberEats&amp;utm_medium=web%20blog%20%2F%20ck" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">mobile app development solutions</a>&#8211;&nbsp;</p>
+<h4>1. Sparing Time</h4>
+<p>Prior to visiting a café, an individual, as a rule, might suspect multiple times that is it a decent choice? Is it the opportune time? Did the flavor of food will fulfill me? Furthermore, uncommonly, will the request will be put at the table on schedule?</p>
+<p><strong>To save time and effort in every aspect of life by providing a handy solution through smartphones. </strong><a href="http://www.statista.com/statistics/259191/ordering-takeout-delivery-from-restaurants-in-the-us/" target="_blank" rel="noreferrer noopener nofollow" aria-label=" (opens in a new tab)">26% of people order food online at least once a week</a><strong>while another 24% do so two or three times a week.</strong></p>
+<div class="wp-block-image"><figure class="aligncenter"><img src="../wp-content/uploads/2020/08/graph1-2.png" alt="" class="wp-image-5136" srcset="../wp-content/uploads/2020/08/graph1-2.png 512w, ../wp-content/uploads/2020/08/graph1-2-300x194.png 300w" sizes="(max-width: 512px) 100vw, 512px"><figcaption> <strong>(Image Source: <a href="https://www.semrush.com/blog/mobile-marketing-lessons-from-5-smart-food-delivery-apps/" target="_blank" rel="noreferrer noopener nofollow" aria-label=" (opens in a new tab)">SEMrush Blog</a>)</strong> </figcaption></figure></div>
+<p>Thus, requesting food spares your time. Until the food will be conveyed to you till that time it is possible that you can take rest or can finish your other work or you went home.&nbsp;<br></p>
+<h4>2. Can See Reviews and Ratings Before Visiting</h4>
+<p>Truly, before requesting food from any eatery, you can see the input of the café administrations and the application administrations. What&#8217;s more, subsequent to seeing the criticism and appraisals, you can arrange food from the great café. Not only this but a study by professional services firm McKinsey found that, in the UK, 80% of food delivery customers had never or rarely switch platforms.</p>
+<div class="wp-block-image"><figure class="aligncenter"><img src="../wp-content/uploads/2020/08/graph2-2.png" alt="" class="wp-image-5137" srcset="../wp-content/uploads/2020/08/graph2-2.png 512w, ../wp-content/uploads/2020/08/graph2-2-300x169.png 300w" sizes="(max-width: 512px) 100vw, 512px"><figcaption> <strong>(Image Source: <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-changing-market-for-food-delivery" target="_blank" rel="noreferrer noopener nofollow" aria-label=" (opens in a new tab)">Mckinsey</a>)</strong></figcaption></figure></div>
+<h4>3. Can Taste Different Cuisine</h4>
+<p>Internet requesting allows <a href="../../offerings/mobile-app-development/index-1.htm?utm_source=delivery%20app%20like%20UberEats&amp;utm_medium=web%20blog%20%2F%20ck" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">app development company</a> to arrange food from various cooking. Like you need to eat a Continental dish and one Chinese so you can locate the two distinct foods for you and can arrange it.</p>
+<h2>Kinds of Food Delivery Start-up Models</h2>
+<p>In the current food delivery situation, there is three significant food delivery fire up models that are ruling the current market.&nbsp;<br></p>
+<h4>1. The Aggregator Model</h4>
+<p>This model depends on the customary arrangement of food conveyance. These new businesses that depend on the aggregator model go about as the outsider who deals with the shoppers and the cafés in the region. They give a stage to the customers to peruse through an incredible number of foods and cafés. As an outsider the food conveyance application aggregators offer help for requesting and offer an introduction to the eateries. The shopper can investigate the menus, audits, appraisals, and costs simply in the wake of enrolling on the application, and afterward put in their request.&nbsp;<br></p>
+<h4>2. New delivery administrations, or applications with calculated help</h4>
+<p>So also, aggregator applications permit clients to arrange food at different pizza shops, eateries, bistros, and different foundations where they cook food, and yet they additionally help with food conveyance as per the Uber plot. For eateries, this is a genuine find, on the grounds that new administrations permit any eatery, pizza joint, bistro, and even your grandma, who readies the best crusty fruit-filled treats on this side of the Mississippi, to enter the market.</p>
+<h4>3. Food Delivery Platform With Logistic Support </h4>
+<p>This model varies from the aggregator model as it bolsters the joining forces cafés with complete coordination support for <a href="../../offerings/android-development/index-1.htm?utm_source=delivery%20app%20like%20UberEats&amp;utm_medium=web%20blog%20%2F%20ck" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">android app development solutions</a>. This model can stretch out its administrations gainfully to little cafés, food joints, and home conveyance administrations to convey food in a consistent way. This model offers a great deal of straightforwardness and backing to new businesses in the food business who don&#8217;t have the assets or the transmission capacity to have their own conveyance framework set up.</p>
+<h2>Case Study on UberEats</h2>
+<p>Uber Eats is one of the 20 most-utilized applications. Its plan of action has propelled a great many food conveyance new companies to join the game.</p>
+<p><strong>Uber Eats is the fastest-growing meal delivery service in the US, bringing in nearly as much new spending as industry leader Grubhub, <a rel="noreferrer noopener nofollow" aria-label=" (opens in a new tab)" href="http://e.businessinsider.com/click/12953326.2330/aHR0cHM6Ly9ibG9nLnNlY29uZG1lYXN1cmUuY29tLzIwMTgvMDQvMTMvdGFrZW91dC10YWtlb3Zlci11YmVyLWVhdHMtZ3J1Ymh1Yi8/56378b5356cf60046a8b4ca0Bf3f08fc8" target="_blank">according </a>to Second Measure data.</strong></p>
+<div class="wp-block-image"><figure class="aligncenter"><img src="../wp-content/uploads/2020/08/graph3.png" alt="" class="wp-image-5138"><figcaption> <strong>(Image Source:<a href="https://www.businessinsider.com/uber-eats-is-the-fastest-growing-meal-delivery-service-2018-4?IR=T" target="_blank" rel="noreferrer noopener nofollow" aria-label=" (opens in a new tab)"> Business Insider</a>)</strong> </figcaption></figure></div>
+<p><strong>The UberEats application is both an eatery aggregator and a conveyance specialist. Hence, a food conveyance application like Uber performs two distinct highlights:&nbsp;</strong><br></p>
+<ul><li>UberEats utilizes a customary food conveyance model, posting accomplices eateries in a solitary application.</li><li>Simultaneously, UberEats handles request conveyance. The organization utilizes its own coordinations system to convey orders from cafés that don&#8217;t have a conveyance choice.</li></ul>
+<h2>Key Elements Of A Successful Food Delivery App</h2>
+<p>Before you start building up your application you need to know what are the three key components that tends to make any application efficient and user friendly. Here are the three important factors that would contribute in your journey.&nbsp;</p>
+<h4>The Client-Side&nbsp;<br></h4>
+<ul><li>Join usefulness for empowering new clients to make a record utilizing their email address or by means of outsider applications like Google and Facebook.</li><li>The capacity to pick a café or bistro from a rundown of merchants accessible from your area</li><li>The capacity to rapidly put orders from a menu</li></ul>
+<p>An installment entryway framework for handling installments and approving promotion codes. Clients ought to have the option to pay for their requests as fast and proficiently as could reasonably be expected. In a perfect world, <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="../../index-2.htm?utm_source=delivery%20app%20like%20UberEats&amp;utm_medium=web%20blog%20%2F%20ck" target="_blank">software development company</a> should include as may installment choices as could reasonably be expected — charge cards, PayPal, COD, Apple/Google Pay, and so forth.</p>
+<ul><li>The capacity to follow request status, evaluated conveyance time, and messenger area.&nbsp;</li><li>The alternative to spare eateries, bistros and most loved food things for future reference&nbsp;</li><li>The capacity to visit with both the café and the dispatch for updates and concerns in regards to their request.</li></ul>
+<h4>The Restaurant Side<br></h4>
+<p>An eatery information exchange page that would empower food organizations to join the food conveyance stage. Such a page catches all appropriate data about the café, including their business name, area, business hours, contact data, and so forth.&nbsp;<br></p>
+<p>An incorporated substance the board framework that empowers cafés to distribute their menu and include photographs of the food conveyance stage&nbsp;<br></p>
+<p><strong>According to stats by GloriaFood, 42% of the orders that were made in the year 2017 were all via the food delivery app.</strong></p>
+<div class="wp-block-image"><figure class="aligncenter"><img src="../wp-content/uploads/2020/08/graph4.png" alt="" class="wp-image-5139" srcset="../wp-content/uploads/2020/08/graph4.png 512w, ../wp-content/uploads/2020/08/graph4-300x146.png 300w" sizes="(max-width: 512px) 100vw, 512px"><figcaption> <strong>(Image Source: <a href="https://www.gloriafood.com/restaurant-ideas/advantages-of-online-food-ordering" target="_blank" rel="noreferrer noopener nofollow" aria-label=" (opens in a new tab)">GloriaFood</a>)</strong> </figcaption></figure></div>
+<p>The capacity to dispatch advancements and offer promotion codes to clients&nbsp;<br></p>
+<p>A request following component that empowers cafés to see approaching requests and update clients with respect to the status of their requests. The two players should have the option to see the specific status of requests at some random time — dropped, finished, for conveyance, and so forth.&nbsp;<br></p>
+<p>The capacity to discover the closest messenger accessible to convey orders. The application ought to have the option to follow the area of the dispatch from the get and up until the request is effectively conveyed.&nbsp;<br></p>
+<p>A cross interface correspondence highlights that permits the café to speak with the client and dispatch consistently.</p>
+<h4>The Courier Side<br></h4>
+<ul><li>An information exchange page that empowers messengers to pursue your food conveyance application.</li><li>A request the executives page for dispatches that empower them to book conveyances progressively. Such an element ought to give all subtleties of a request, including get and conveyance area, request size, and the client&#8217;s contact data.</li><li>An alternative to assess the conveyance time before getting the request.</li><li>Cross interface correspondence includes that would empower messengers to talk with both dispatch and eatery and send refreshes concerning conveyance</li><li>A record history page where messengers can track their experience conveying to a specific client.</li><li>The messenger part of the application as a rule has less highlights; subsequently, around 160 hours ought to be sufficient for its turn of events.</li></ul>
+<h2>Important Features to Import in your Food Delivery App</h2>
+<p>Food delivery app is one of the most crucial and important source that is being developed everyday by the industries at various spots.<br></p>
+<p>While you are at the journey to <a href="index.htm" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">create an on-demand delivery app like UberEats or Deliveroo</a> you should know that there are several features that are required in your app<br></p>
+<h4>1. Google API</h4>
+<p>Google APIs are application programming interfaces (APIs) created by Google which permit correspondence with Google Services and their incorporation to different administrations. Instances of these incorporate Search, Gmail, Translate or Google Maps. Outsider applications can utilize these APIs to exploit or broaden the usefulness of the current administrations.&nbsp;<br></p>
+<p>Google APIs take up a sizeable lump of land in the API universe. In this article, we&#8217;ve picked the most remarkable, inventive and intriguing modules from Big G.&nbsp;<br></p>
+<p>APIs are an important device for designers, as they let your destinations and web applications remain on the shoulders of monsters<br></p>
+<p>At the hour of composing, for utilizing Maps API Google charges $2 to $14 for every 1000 questions up to a limit of 100,000 inquiries for every day. Furthermore, they have extra value for utilizing Routes and Places APIs. All things considered, you get a $200 credit each month, which makes the Places API for all intents and purposes free for little to medium-sized food organizations.&nbsp;<br></p>
+<h4>2. Give menial helper </h4>
+<p>A menial helper is the aid of propelling AI innovation. Your clients can arrange their preferred things through couriers or utilizing a solitary word. Taking the case of GrubHub, the application has incorporated Alexa, a remote helper of Amazon, to empower its clients to reorder any of their past requests. The remote helper additionally gives a rough delivery time for the request. Therefore, you should <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="../../offerings/hire-mobile-developers/index-1.htm?utm_source=delivery%20app%20like%20UberEats&amp;utm_medium=web%20blog%20%2F%20ck" target="_blank">hire mobile app developer </a>that are able to fulfill all these requirements for your app.&nbsp;<br></p>
+<h4>3. Payment</h4>
+<p>At the point when the request is prepared, permit your clients to pay for it through the implicit installment door. Our recommendation is to incorporate a few installment frameworks, for example, PayPal, Stripe, MangoPay. We applied this methodology to the custom commercial center turn of events. You can locate the full contextual analysis on the connection. Other than these installment choices, let your client have a Cash on Delivery choice.&nbsp;<br></p>
+<h4>4. Delivery Fee from Customers and income sharing from restaurants </h4>
+<p>The evaluating model for UberEats is a base cost in addition to overcharges. Lunch and Dinner hours are the pinnacle hours and in those hours, at times the menu and the eateries become constrained.&nbsp;<br></p>
+<p>UberEats acquires itself some common income sharing for the requests satisfied by UberEats. This reaches from 15% to 40%, contingent upon the development of the market.&nbsp;<br></p>
+<h4>5. Delivery Fee from Customers </h4>
+<p>The evaluating model for UberEats is a base cost in addition to overcharges. Lunch and Dinner hours are the pinnacle hours and in those hours, at times the menu and the eateries become constrained.&nbsp;<br></p>
+<p>Believe it or not, it was predicted that one sector which grabbed maximum attention was the food industry. The reasons were that it is expected to see revenue of $78 billion by 2018</p>
+<div class="wp-block-image"><figure class="aligncenter"><img src="../wp-content/uploads/2020/08/graph5.png" alt="" class="wp-image-5140" srcset="../wp-content/uploads/2020/08/graph5.png 512w, ../wp-content/uploads/2020/08/graph5-300x238.png 300w" sizes="(max-width: 512px) 100vw, 512px"><figcaption> <strong>(Image Source: <a href="https://www.fatbit.com/fab/future-online-food-industry-guide-aspiring-entrepreneurs/" target="_blank" rel="noreferrer noopener nofollow" aria-label=" (opens in a new tab)">Fat Bit Technology</a>)</strong></figcaption></figure></div>
+<h4>6. Income Sharing from Restaurants </h4>
+<p>UberEats acquires itself some common income sharing for the requests satisfied by UberEats. This reaches from 15% to 40%, contingent upon the development of the market.</p>
+<h2>Cost of Constructing an App Like Uber</h2>
+<p>Having peace of the pie in the food conveyance industry is critical and this &#8220;billion-dollar war&#8221; will just get harder as immersion increments. The truth will surface eventually which organizations will make it to the top.&nbsp;<br></p>
+<p>The expense to make an application like Uber Eats depends on various components. Building an MVP for an On-Demand Platform includes making web/portable interfaces for both gracefully by means of the driver&#8217;s application and café&#8217;s application and request through the client&#8217;s application. Another significant segment is the operational hub/administrator board that bends over as a CRM and a Dashboard to direct and control your basic activities for example the UberEats Dashboard. The application for the Restaurant proprietors would empower them to deal with their menus, estimating, stock accessibility, and to give offers and limits to their clients. Everything is stuck together by the APIs that work on the head of focal databases and control rationale – some portion of the backend structure that sudden spikes in demand for cloud.&nbsp;<br></p>
+<p>Considering a stage that can deal with 500-1000 exchanges every day, a <a href="../../offerings/mobile-app-development/index-1.htm?utm_source=delivery%20app%20like%20ubereats&amp;utm_medium=web%20blog%20%2F%20ck" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">mobile app development company</a> is taking a gander at an upwards of $100k-$300k exertion for an underlying MVP.&nbsp;<br></p>
+<p>Varieties in the ballpark essentially are on these records –&nbsp;<br></p>
+<ul><li><strong>Number of partners&nbsp;</strong></li><li><strong>Number of stages that are a piece of the underlying dispatch&nbsp;</strong></li><li><strong>Complexities in the plan of action&nbsp;</strong></li></ul>
+<p>Geology/Region out of which your improvement group works or architects the item. Every hour rates fluctuate from $20 &#8211; $60 (portions of India/Eastern Europe/South East Asia) to $80 &#8211; $150 (portions of Western Europe/US)&nbsp;<br></p>
+<p>In any case, we, at Yelo, lessen the time and cost required by around 30%. The expenses for an MVP while adopting the Yelo strategy can be as low as USD 1.8k to USD 5k. We acquire the specialized ability, well beyond the conspicuous money-saving advantages.</p>
+<h2>In the Nutshell<br></h2>
+<p>We should summarize it. Improvement of the application like UberEats will take around 600 working hours, its complete aggregate legitimately relies upon the client inclinations and working characteristics of things to come.</p>
+<p>For the food delivery mobile app development company that needs guidance in this zone can <a href="../../contact/index-3.htm?utm_source=delivery%20app%20like%20ubereats&amp;utm_medium=web%20blog%20%2F%20ck" target="_blank" rel="noreferrer noopener" aria-label="Contact Us (opens in a new tab)">Contact Us</a> with the help of our details. The organization and users that need help can input their details on the fre estimation page and get in touch with us. </p>
+</div>
+<div class="entry meta">
+
+
+</div>
+<div class="wpl-postlike">
+<h4>YOU MAY ALSO LIKE </h4>
+<div class="similarListing">
+<ul class="like-blogs">
+<li>
+<figure style="background: url(../wp-content/uploads/2020/07/feature-3.jpg) "></figure>
+<div class="blogTitle">
+Where, When And How To Choose A Mobile App Development Company For Your Business <div class="btn-block">
+<a href="../choose-a-mobile-app-development-company/index.htm" class="continue-btn red-btn circle-btn"> Continue reading</a>
+</div>
+</div>
+</li>
+<li>
+<figure style="background: url(../wp-content/uploads/2020/07/feature1-2.jpg) "></figure>
+<div class="blogTitle">
+How To Make A Successful Messaging App In 2021? <div class="btn-block">
+<a href="../make-a-successful-messaging-app/index.htm" class="continue-btn red-btn circle-btn"> Continue reading</a>
+</div>
+</div>
+</li>
+<li>
+<figure style="background: url(../wp-content/uploads/2020/07/feature-2.jpg) "></figure>
+<div class="blogTitle">
+A Comprehensive Guide on How to Create a Social Media App <div class="btn-block">
+<a href="../a-comprehensive-guide-on-how-to-create-a-social-media-app/index.htm" class="continue-btn red-btn circle-btn"> Continue reading</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="poster-area">
+<div class="poster-blog-heading">About Author</div>
+<div class="posterBlog">
+<div class="posterPic">
+<img src="../wp-content/uploads/2019/04/Seth-Rishi-333x500-1.jpg" alt="Aman Malhotra" class="avatar avatar-161 wp-user-avatar wp-user-avatar-161 alignnone photo">
+</div>
+<div class="right-author">
+<div class="user-name">Aman Malhotra</div>
+<p>Aman is a business consultant and strategic leader bridging the gap between technology and client satisfaction. With 15+ years of knowledge, innovation and hands-on experience in providing consultations to startups, agencies, SME's and large enterprises who need dedicated development and technology partners. He has also lead to the delivery of countless web development and mobile app development projects with 100% client satisfaction.</p>
+</div>
+</div>
+</div>
+<section class="inquireBlock">
+<div class="leftContent">
+<div class="smallTxt"> Make your ideas turn into reality </div>
+<div class="capTxt"> With our web &amp; mobile app solutions </div>
+</div>
+<div class="contact-bttn"> <a href="../../contact/index.htm">Get in touch now!</a> </div>
+</section>
+</div>
+</div>
+</div>
+<div class="col-sm-3 right-blog">
+<div class="secondaryColumn">
+<div id="text-11" class="widgetContainer widget_text"> <div class="textwidget"><div class="contact-bar">
+<h3>Looking for<br> Certified & <br>Experienced <br><span class="red-text">Developers</span></h3>
+<ul>
+<li>300+ Experts</li>
+<li>Flexible Engagement</li>
+<li>NDA Protection</li>
+<li>100% Satisfaction</li>
+<li>24X7 Support</li>
+<li>Moneyback Guarantee</li>
+</ul>
+<div class="contact-bttn">
+<a href="../../contact/index.htm">Contact Now!</a>
+</div>
+</div></div>
+</div><div id="text-4" class="widgetContainer widget_text"><h3 class="widgetTitle">Xicom Technologies Ltd.</h3> <div class="textwidget">Founded in the year 2002, Xicom is a CMMI Level-3 & ISO 9001:2008 certified offshore web development company with a strong team of 100+ highly skilled IT experts, catering result-oriented and cost-competitive solutions to SMEs across the US, UK, Japan, Australia and many parts of Europe.</div>
+</div> <div id="recent-posts-4" class="widgetContainer widget_recent_entries"> <h3 class="widgetTitle">Recent Posts @ Xicom</h3> <ul>
+<li>
+<a href="../why-php-is-still-good-for-web-development/index.htm">What Makes PHP a Still Good Choice For Web Development?</a>
+</li>
+<li>
+<a href="../build-a-web-app/index.htm">Estimating the Web App Development Cost: How To Set the Budget Rightly?</a>
+</li>
+<li>
+<a href="../businesses-should-invest-in-enterprise-applications/index.htm">Why Do Businesses Should Invest In Enterprise Application?</a>
+</li>
+<li>
+<a href="../build-a-enterprise-mobile-application/index.htm">Build A Successful Enterprise Application For Your Business</a>
+</li>
+<li>
+<a href="../understanding-the-app-budget-by-app-type/index.htm">Mobile App Development Cost: Understanding The App Budget By App Type in 2022</a>
+</li>
+<li>
+<a href="../cost-to-create-a-game-app/index.htm">How Much Does It Cost To Develop a Gaming App?</a>
+</li>
+<li>
+<a href="index.htm">How to build a food delivery app like Ubereats and Deliveroo</a>
+</li>
+<li>
+<a href="../make-a-successful-messaging-app/index.htm">How To Make A Successful Messaging App In 2021?</a>
+</li>
+<li>
+<a href="../cost-to-make-a-fitness-app/index.htm">How Much Does It Cost to Make a Fitness App</a>
+</li>
+<li>
+<a href="../find-the-right-development-partner-in-san-francisco-usa/index.htm">How to find the right development partner in San Francisco, USA</a>
+</li>
+<li>
+<a href="../create-a-bar-management-app/index.htm">Build A Bar Management App: Cost, Features, Business Model, etc.</a>
+</li>
+<li>
+<a href="../a-comprehensive-guide-on-how-to-create-a-social-media-app/index.htm">A Comprehensive Guide on How to Create a Social Media App</a>
+</li>
+<li>
+<a href="../choose-a-mobile-app-development-company/index.htm">Where, When And How To Choose A Mobile App Development Company For Your Business</a>
+</li>
+<li>
+<a href="../mobile-app-developers-in-india/index.htm">Find and Hire Right App Developers In India &#8211; Things To Consider</a>
+</li>
+</ul>
+</div><div id="categories-4" class="widgetContainer widget_categories"><h3 class="widgetTitle">Blog Categories</h3> <ul>
+<li class="cat-item cat-item-198"><a href="../category/android-app-development/index.htm">Android App Development</a>
+</li>
+<li class="cat-item cat-item-80"><a href="../category/asp-net-development/index.htm">ASP.NET Development</a>
+</li>
+<li class="cat-item cat-item-384"><a href="../category/asp-net-development/asp-net-development-company/index.htm">ASP.NET Development Company</a>
+</li>
+<li class="cat-item cat-item-334"><a href="../category/big-data-analytics/index.htm">Big Data Analytics</a>
+</li>
+<li class="cat-item cat-item-290"><a href="../category/blockchain-development/index.htm">Blockchain Development</a>
+</li>
+<li class="cat-item cat-item-309"><a href="../category/cloud-computing/index.htm">Cloud Computing</a>
+</li>
+<li class="cat-item cat-item-127"><a href="../category/cms-development/index.htm">CMS Development</a>
+</li>
+<li class="cat-item cat-item-231"><a href="../category/cross-platform-app-development/index.htm">Cross Platform App Development</a>
+</li>
+<li class="cat-item cat-item-213"><a href="../category/ecommerce-development/index.htm">Ecommerce Development</a>
+</li>
+<li class="cat-item cat-item-388"><a href="../category/hire-app-developers/index.htm">hire app developers</a>
+</li>
+<li class="cat-item cat-item-382"><a href="../category/hire-magento-developer/index.htm">Hire Magento Developer</a>
+</li>
+<li class="cat-item cat-item-376"><a href="../category/hire-mobile-app-developer/index.htm">Hire Mobile App Developer</a>
+</li>
+<li class="cat-item cat-item-375"><a href="../category/hire-software-developer/index.htm">Hire software developer</a>
+</li>
+<li class="cat-item cat-item-294"><a href="../category/iot-development/index.htm">Internet of Things (IoT)</a>
+</li>
+<li class="cat-item cat-item-54"><a href="../category/ios-app-development/index.htm">iOS App Development</a>
+</li>
+<li class="cat-item cat-item-148"><a href="../category/java-development/index.htm">Java Development</a>
+</li>
+<li class="cat-item cat-item-383"><a href="../category/java-development/java-development-company/index.htm">Java development company</a>
+</li>
+<li class="cat-item cat-item-170"><a href="../category/magento-development/index.htm">Magento Development</a>
+</li>
+<li class="cat-item cat-item-53"><a href="../category/mobile-app-development/index.htm">Mobile App Development</a>
+</li>
+<li class="cat-item cat-item-391"><a href="../category/mobile-app-development-companies-in-india/index.htm">Mobile App Development Companies in India</a>
+</li>
+<li class="cat-item cat-item-377"><a href="../category/mobile-app-development/mobile-app-development-company/index.htm">Mobile app development company</a>
+</li>
+<li class="cat-item cat-item-389"><a href="../category/mobile-app-development-company-2/index.htm">mobile app development company</a>
+</li>
+<li class="cat-item cat-item-392"><a href="../category/mobile-app-development-company-india/index.htm">Mobile App Development Company India</a>
+</li>
+<li class="cat-item cat-item-387"><a href="../category/outsourcing-software-development-company/index.htm">outsourcing software development company</a>
+</li>
+<li class="cat-item cat-item-49"><a href="../category/php-development/index.htm">PHP Development</a>
+</li>
+<li class="cat-item cat-item-4"><a href="../category/software-development/index.htm">Software Development</a>
+</li>
+<li class="cat-item cat-item-426"><a href="../category/software-development-company-in-india/index.htm">software development company in india</a>
+</li>
+<li class="cat-item cat-item-3"><a href="../category/web-development/index.htm">Web Development</a>
+</li>
+<li class="cat-item cat-item-390"><a href="../category/web-development/web-development-company/index.htm">web development company</a>
+</li>
+<li class="cat-item cat-item-14"><a href="../category/xicom-technologies/index.htm">Xicom Technologies / Reviews</a>
+</li>
+</ul>
+</div>
+</div> <div class="side-logos">
+<div class="half-logo clutch">
+<a href="https://clutch.co/profile/xicom-technologies">
+<img src="../wp-content/themes/grid_focus/gridfocus/images/Mobile_App_Developers_2019.png" alt="Clutch">
+</a>
+</div>
+<div class="half-logo good_firms"><a target="_blank" href="https://www.goodfirms.co/companies/view/3935/xicom-technologies"><img style="width:240px" src="../../badges/blue-button/app-development.svg" alt="GoodFirms Badge"></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<footer class="footer">
+<div class="inner-footer">
+<div class="container-fluid">
+<div class="accordion row col-sm-12" id="accordionExample">
+<div class="menu-listing col contact-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+Offices</button>
+<span class="footer-head hide-xs"><a href="../../contact/index.htm">Offices</a></span>
+<div id="collapseOne" class="collapse vd show" aria-labelledby="headingOne" data-parent="#accordionExample">
+<p>
+18 Bartol Street #1155 <br>
+San Francisco, California 94133 <br>
+United States. <br>
+Phone +1.408.878.3255<br>
+</p>
+<p>
+<a class="address-map" href="https://goo.gl/maps/TQTzgzV8FP22" target="_blank">
+301-10 Opal Tower, Business Bay <br>
+Dubai, United Arab Emirates.</a><br>
+Phone +971.529144795<br>
+</p>
+<p>
+<a class="address-map" href="https://goo.gl/maps/TQTzgzV8FP22" target="_blank">
+C-1/134, Janak Puri, New Delhi<br>
+110058 India.</a><br>
+Phone +91.11.25502616<br>
+</p>
+</div>
+</div>
+<div class="menu-listing col service-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+Services</button>
+<span class="footer-head hide-xs"><a href="../../services/index.htm">Services</a></span>
+<div id="collapseTwo" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../services/web-development/index.htm">Web Development</a></li>
+<li><a href="../../services/mobile-app-development/index.htm">Mobile App Development</a></li>
+<li><a href="../../services/software-development/index.htm">Software Development</a></li>
+<li><a href="../../services/consulting/index.htm">IT Consulting </a></li>
+</ul>
+</div>
+</div>
+<div class="menu-listing col solution-col">
+<div class="inner-nav">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+Latest Thinking</button>
+<span class="footer-head hide-xs"><a href="../../latest-thinking/index.htm">Latest Thinking</a></span>
+<div id="collapseThree" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../latest-thinking/big-data-analytics/index.htm">Big Data & Analytics</a></li>
+<li><a href="../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</div>
+<div class="inner-nav mb0">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+Solutions</button>
+<span class="footer-head hide-xs"><a href="../../solutions/index.htm">Solutions</a></span>
+<div id="collapseSix" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../solutions/technologies/index.htm">Technologies</a></li>
+<li><a href="../../solutions/hire-developers/index.htm">Hire Developers</a></li>
+<li><a href="../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="menu-listing col company-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+Corporate
+</button>
+<span class="footer-head hide-xs"><a href="../../corporate/index.htm">Corporate</a></span>
+<div id="collapseFour" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../industries/index.htm">Industries </a></li>
+<li><a href="../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../contact/index.htm">Contact Us</a></li>
+<li><a href="../../careers/index.htm">Careers</a></li>
+<li><a href="../index.htm">Blog</a></li>
+<li><a href="../../terms/index.htm">Terms of Use</a></li>
+<li><a href="../../privacy/index.htm">Privacy Policy</a></li>
+<li><a href="../../sitemap/index.htm">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="menu-listing col hvQues">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+Have Questions?
+</button>
+<span class="footer-head hide-xs">Have Questions?</span>
+<div class="phone-contact">Get in touch with us <a href="tel:+1.408.878.3255"><span class="number">+1.408.878.3255</span></a></div>
+<div id="collapseFive" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<div class="rowfull">
+Skype: <a href="skype:xicom.sales">xicom.sales</a><br>
+Email: <a href="../../cdn-cgi/l/email-protection.html#2251434e4751625a4b414d4f0c404b58"><span class="__cf_email__" data-cfemail="6615070a0315261e0f05090b4804">[email&#160;protected]</span>iz</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-footer">
+<div class="container-fluid">
+<div class="row copyright">
+<div class="col-sm-7 copy">
+<p> Copyright 2002-2023 Xicom Technologies Ltd. </p>
+<div class="rateit-wrap">
+<div class="overall social-foot">
+<div class="content" itemscope="" itemtype="http://schema.org/Product">
+<meta itemprop="description" content="Xicom is a ISO 9001 certified software development company providing custom, offshore software, mobile app and web application development services in Dubai, UAE.">
+<input type="hidden" name="post_id" id="rating_post_id">
+<input type="hidden" name="currentrate" id="currentrate" value="5835">
+<span> Rated <span id="ratingValue">4.8 </span>
+out of 5.0
+<meta itemprop="name" content="Software, Web, Mobile App Development Company">
+<link itemprop="image" href="https://www.xicom.ae/"> by </span>
+<span class="client-project" style="display: inline-block;">
+<div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope="">
+<meta itemprop="reviewCount" content="5835">
+<meta itemprop="ratingValue" content="4.8">
+</div>
+<div itemprop="review" itemtype="http://schema.org/Review" itemscope="">
+<div itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+<meta itemprop="name" content="Xicom">
+</div>
+<div itemprop="reviewRating" itemtype="http://schema.org/Rating" itemscope="">
+<meta itemprop="ratingValue" content="5">
+<meta itemprop="bestRating" content="5">
+</div>
+</div> <span id="totalClient"> 5835</span>+ Xicom clients on over 8350+ projects</span>
+<div itemprop="brand" itemtype="http://schema.org/Thing" itemscope="">
+<meta itemprop="name" content="Xicom">
+</div>
+</div>
+<input type="hidden" name="rating_page_url" value="mobile-app-development.php" id="rating_page_url">
+</div>
+</div>
+</div>
+<div class="col-sm-3 footer-logos">
+<a href="https://clutch.co/profile/xicom-technologies" class="f-logo cluth" target="_blank"> </a>
+<a href="https://www.goodfirms.co/companies/view/3935/xicom-technologies" class="f-logo good-firm" target="_blank"> </a>
+</div>
+<div class="col-sm-2 social-icons">
+<a href="https://www.facebook.com/xicomtechnologies" class="fb-icon" target="_blank"></a>
+<a href="https://www.twitter.com/xicomtech" class="tw-icon" target="_blank"></a>
+<a href="https://www.linkedin.com/company/xicom-technologies-ltd/" class="lnkd-icon" target="_blank"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="live-chat" id="status">
+<a href="#" class="blue-btn"> Live Chat </a>
+</div>
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="2e9e2d106d1000cbc4d5468a-text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/573d53a6a8b2e6115f951546/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript">
+Tawk_API = Tawk_API || {};
+Tawk_API.onStatusChange = function (status){
+
+if(status === 'online')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+else if(status === 'away')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+else if(status === 'offline')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+};
+Tawk_API.onOfflineSubmit = function(data){ 
+window.location= document.location.origin + "/contact/thanks.html"; 
+};
+Tawk_API.onChatStarted = function(){
+};
+</script>
+
+</footer>
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript" src="../wp-includes/js/comment-reply.min.js?ver=5.1.16"></script>
+<script type="2e9e2d106d1000cbc4d5468a-text/javascript" src="../wp-includes/js/wp-embed.min.js?ver=5.1.16"></script>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2e9e2d106d1000cbc4d5468a-|49" defer=""></script></body>
+</html>

@@ -1,0 +1,911 @@
+﻿<!DOCTYPE html>
+<html>
+<head profile="https://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Software, Mobile App, Web Application Development | Xicom Blog - Part 13</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="WordPress 5.1.16">
+<link rel="shortcut icon" href="../../wp-content/themes/grid_focus/gridfocus/images/favicon/favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="Xicom Blog | Software, Mobile App, Web Application Development RSS Feed" href="../../feed/index.htm">
+
+<link rel="stylesheet" href="../../../bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="../../../css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<link href="../../../css-1?family=Lato:300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.xicom.biz/blog/wp-content/themes/grid_focus/gridfocus/css/fonts/font-awesome-4/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="../../wp-content/themes/grid_focus/gridfocus/css/fonts/stylesheet.css">
+<link type="text/css" rel="stylesheet" href="../../wp-content/themes/grid_focus/gridfocus/css/reset.css">
+<link rel="stylesheet" href="../../wp-content/themes/grid_focus/gridfocus/style.css" type="text/css" media="screen">
+<link type="text/css" rel="stylesheet" href="../../wp-content/themes/grid_focus/gridfocus/css/responsive.css">
+<script src="../../../ajax/libs/jquery/1.10.2/jquery.min.js" type="9fc8fc93ac37a1e157698073-text/javascript"></script>
+<script src="../../wp-content/themes/grid_focus/gridfocus/js/owl.carousel.js" type="9fc8fc93ac37a1e157698073-text/javascript"></script>
+<script src="../../wp-content/themes/grid_focus/gridfocus/js/custom.js" type="9fc8fc93ac37a1e157698073-text/javascript"></script>
+<link rel="dns-prefetch" href="//s.w.org">
+<script type="9fc8fc93ac37a1e157698073-text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.xicom.biz\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.16"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55358,56760,9792,65039],[55358,56760,8203,9792,65039])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../wp-includes/css/dist/block-library/style.min.css?ver=5.1.16" type="text/css" media="all">
+<script type="9fc8fc93ac37a1e157698073-text/javascript" src="../../wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="9fc8fc93ac37a1e157698073-text/javascript" src="../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.htm">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.xicom.biz/blog/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.1.16">
+
+<link rel="canonical" href="index.htm">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xicom.biz/blog">
+<meta property="og:title" content="Xicom Blog | Software, Mobile App, Web Application Development">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Xicom Blog | Software, Mobile App, Web Application Development">
+<meta property="og:image" content="">
+<meta property="og:image:alt" content="">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+<meta itemscope="" itemtype="website">
+<meta itemprop="description" content="">
+<meta itemprop="image" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.xicom.biz/blog">
+<meta name="twitter:title" content="Xicom Blog | Software, Mobile App, Web Application Development">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="">
+<style type="text/css" id="wp-custom-css">
+			.table-image.table {
+    border-left: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    margin: 20px auto;
+}
+
+.table-image.table th, .table-image.table td {
+    padding: 5px 15px;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #758495;
+    border-right: 1px solid #dee2e6;
+}
+
+.table-image.table th {
+    background: #022a5e;
+    color: #fff;
+}
+
+@media screen and (max-width:567px){
+	.table-image.table tr th, .table-image.table tr td {font-size: 13px;}
+/*	.table-image.table tr th, .table-image.table tr td { flex: 0 0 100%; height: 50%; font-size: 13px; padding: 5px 10px; width: 150px; display: flex; align-items: center; justify-content: center;}
+
+.table-image.table tbody tr { display: flex; flex-wrap: wrap; height: 100%;}
+
+.table-image.table tbody, .table-image.table thead { display: flex;}
+.table-image.table { display:flex; overflow:auto;}
+.table-image.table thead {    position: sticky; left: 0;}
+	.table-image.table tr th {border-bottom: 1px solid #909ba8; border-top:0;}*/
+}
+		</style>
+
+<script async="" src="../../../gtag/js-1?id=UA-25100098-3" type="9fc8fc93ac37a1e157698073-text/javascript"></script>
+<script type="9fc8fc93ac37a1e157698073-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+//   gtag('config', 'UA-25100098-3');
+  gtag('config', 'UA-25100098-1', { 'optimize_id': 'GTM-KCG4WZC'});
+</script>
+</head>
+<body>
+<script type="9fc8fc93ac37a1e157698073-application/javascript">
+	<!--
+	function popitup(url) {
+		newwindow=window.open(url,'name','height=465,width=460,scrollbars=yes,menubar=no,toolbar=no,resizable=false,location=no');
+
+		if (window.focus) {newwindow.focus()}
+		return false;
+	}
+	// -->
+</script>
+
+<script type="9fc8fc93ac37a1e157698073-text/javascript" language="Javascript" src="../../../js/validation.js"></script>
+<script type="9fc8fc93ac37a1e157698073-text/javascript">
+//declare function
+function validateContact()
+{
+	var error = false;	
+	if (isEmpty('form2', 'contactPerson1'))
+	{
+		$("#contactPerson1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#contactPerson1").removeClass('error');
+		//error = false;
+	}
+	if (isEmpty('form2', 'email1'))
+	{
+		$("#email1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#email1").removeClass('error');
+		//error = false;
+	}
+	if (isEmpty('form2', 'phone1'))
+	{
+		$("#phone1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#phone1").removeClass('error');
+		//error = false;
+	}
+	
+	
+	if (isEmpty('form2', 'description1'))
+	{
+		$("#description1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#description1").removeClass('error');
+		//error = false;
+	}	
+
+	if (error)
+	{		
+		return false;
+	}
+	else
+	{
+		$("#form2").submit();
+	}
+}
+</script>
+
+<div class="container-fluid header-wht">
+<header class="logo-navbar">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+<div class="header-container">
+<div class="inner-overlay"> </div>
+<div class="row header-row">
+<div class="navbar-header col-sm-2">
+<a class="navbar-toggle">
+<div class="sr-only"><div class="header-heading">Software, Mobile App, Web Application Development Company, Services India, USA</div></div>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a href="../../../index.htm" class="logo"></a>
+</div>
+<div class="col-sm-10 right-menu">
+<nav id="slidemenu">
+<div class="inner-menu">
+<div class="navbar-toggle cross">
+<span class="first"></span>
+<span class="second"></span>
+</div>
+<ul id="navigation" class="nav navbar-nav">
+<li class="nav-item"> <a href="../../../services/index.htm">Services</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li> <a href="../../../services/web-development/index.htm"> Web Development </a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../../services/ecommerce-development/index.htm"> Ecommerce Development </a></li>
+<li> <a href="../../../services/content-management-system/index.htm"> Content Management System (CMS) </a></li>
+</ul>
+</li>
+<li> <a href="../../../services/mobile-app-development/index.htm"> Mobile App Development </a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../../services/android-app-development/index.htm"> Android App Development </a></li>
+<li> <a href="../../../services/ios-app-development/index.htm"> iOS App Development </a></li>
+
+<li> <a href="../../../services/react-native-app-development/index.htm"> React Native App Development </a></li>
+<li> <a href="../../../services/flutter-app-development/index.htm"> Flutter App Development </a></li>
+<li> <a href="../../../services/augmented-reality/index.htm"> Augmented Reality / VR </a></li>
+</ul>
+</li>
+<li> <a href="../../../services/software-development/index.htm"> Software Development </a> </li>
+<li> <a href="../../../services/consulting/index.htm"> IT Consulting Services</a></li>
+<li> <a href="../../../services/quality-assurance-testing/index.htm"> Quality Assurance &amp; Testing </a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../../latest-thinking/index.htm">Latest Thinking</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../latest-thinking/big-data-analytics/index.htm">Big Data &amp; Analytics</a></li>
+<li><a href="../../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"><a href="../../../industries/index.htm">Industries</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../industries/automotive/index.htm">Automotive</a></li>
+<li><a href="../../../industries/entertainment/index.htm"> Media and Entertainment </a></li>
+<li><a href="../../../industries/healthcare/index.htm"> Healthcare </a></li>
+<li><a href="../../../industries/manufacturing/index.htm"> Manufacturing </a></li>
+<li><a href="../../../industries/finance/index.htm"> Banking and Finance </a></li>
+<li><a href="../../../industries/real-estate/index.htm"> Real Estate </a></li>
+<li><a href="../../../industries/retail/index.htm"> Retail and Ecommerce </a></li>
+<li><a href="../../../industries/logistics/index.htm"> Logistics and Transportation </a></li>
+<li><a href="../../../industries/travel/index.htm"> Travel and Tourism </a></li>
+<li><a href="../../../industries/education/index.htm"> Education and E-Learning </a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../../solutions/index.htm">Solutions</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../solutions/technologies/index.htm"> Technologies </a>
+<ul class="sub-menu inner-sub">
+<li><a href="../../../offerings/mobile-app-development/index.htm" title="Mobile App Development"> Mobile App Development </a></li>
+<li><a href="../../../offerings/android-development/index.htm" title="Android App Development"> Android App Development </a></li>
+<li><a href="../../../offerings/iphone-development/index.htm" title="iOS App Development"> iOS App Development </a></li>
+
+<li> <a href="../../../services/react-native-app-development/index.htm"> React Native App Development </a></li>
+<li> <a href="../../../services/flutter-app-development/index.htm"> Flutter App Development </a></li>
+<li><a href="../../../offerings/java-development/index.htm" title="Java Development"> Java Development </a></li>
+<li><a href="../../../offerings/asp.net-development/index.htm" title="ASP.NET Development"> ASP.NET Development </a></li>
+<li><a href="../../../offerings/php-development/index.htm" title="PHP Development"> PHP Development </a></li>
+<li><a href="../../../offerings/magento-development/index.htm" title="Magento Development"> Magento Development </a></li>
+<li><a href="../../../offerings/ecommerce-development/index.htm" title="Ecommerce Development"> Ecommerce Development </a></li>
+<li><a href="../../../offerings/web-development/index.htm" title="Web Development"> Web Development </a></li>
+<li><a href="../../../offerings/software-development/index.htm" title="Software Development"> Software Development </a></li>
+</ul>
+</li>
+<li><a href="../../../solutions/hire-developers/index.htm">Hire Developers</a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../../offerings/hire-mobile-developers/index.htm" title="Hire Mobile App Developers">Hire Mobile App Developers</a></li>
+<li><a href="../../../offerings/hire-android-developers/index.htm" title="Hire Android App Developers">Hire Android App Developers</a></li>
+<li> <a href="../../../offerings/hire-iphone-developers/index.htm" title="Hire iPhone App Developers">Hire iOS App Developers</a></li>
+
+<li><a href="../../../offerings/hire-react-native-developers/index.htm" title="Hire React Native Developers">Hire React Native Developers</a></li>
+<li> <a href="../../../offerings/hire-flutter-developers/index.htm" title="Hire Flutter App Developers">Hire Flutter App Developers</a></li>
+<li> <a href="../../../offerings/hire-java-programmers/index.htm" title="Hire Java Developers">Hire Java Developers</a></li>
+<li><a href="../../../offerings/hire-asp.net-programmers/index.htm" title="Hire ASP.NET Developers">Hire ASP.NET Developers</a></li>
+<li> <a href="../../../offerings/hire-php-programmers/index.htm" title="Hire PHP Developers">Hire PHP Developers</a></li>
+<li> <a href="../../../offerings/hire-magento-developers/index.htm" title="Hire Magento Developers">Hire Magento Developers</a></li>
+<li> <a href="../../../offerings/hire-ecommerce-developers/index.htm" title="Hire Ecommerce Developers">Hire Ecommerce Developers</a></li>
+<li> <a href="../../../offerings/hire-web-developers/index.htm" title="Hire Web Developers">Hire Web Developers</a></li>
+<li> <a href="../../../offerings/hire-software-developers/index.htm" title="Hire Software Developers">Hire Software Developers</a></li>
+</ul>
+</li>
+<li><a href="../../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../../corporate/index.htm">Corporate</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../../testimonials/index.htm">Testimonials</a></li>
+<li><a href="../../index.htm">Blog</a></li>
+<li><a href="../../../careers/index.htm">Careers</a></li>
+<li><a href="../../../contact/index.htm">Contact Us</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item contact-num"><a href="tel:+1.408.878.3255">+1.408.878.3255</a></li>
+</ul>
+</div>
+</nav>
+<div class="fr"><a href="../../../contact/index.htm" class="contact-number">Get Free Estimation</a></div>
+<div class="call-circle"><a class="calling" href="tel:+1.408.878.3255"> </a></div>
+<div class="nav-menu">
+<span> </span>
+<span class="right-ar"> </span>
+<span> </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="full-screen-menu section fadeIn">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-7 menu-content">
+<div class="menu-title">
+Inspire The <span class="blueTxt">Next.</span>
+</div>
+<a href="../../../contact/index.htm" class="red-btn"><div class="circle-dot wht-circle"> </div>Get Free Estimation</a>
+</div>
+<div class="col-sm-5 right-menu accordion" id="accordionExample1">
+<ul class="side-navigation">
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#serviceOne" aria-expanded="true" aria-controls="serviceOne">
+<span class="menu-link">Services</span>
+</div>
+<div id="serviceOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../services/index.htm">Overview</a></li>
+<li><a href="../../../services/web-development/index.htm">Web Development</a></li>
+<li><a href="../../../services/mobile-app-development/index.htm">Mobile App Development</a></li>
+<li><a href="../../../services/software-development/index.htm">Software Development</a></li>
+<li><a href="../../../services/consulting/index.htm">IT Consulting </a></li>
+<li> <a href="../../../services/quality-assurance-testing/index.htm"> Quality Assurance &amp; Testing </a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#latestThink" aria-expanded="true" aria-controls="latestThink">
+<span class="menu-link">Latest Thinking</span>
+</div>
+<div id="latestThink" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../latest-thinking/index.htm">Overview</a></li>
+<li><a href="../../../latest-thinking/big-data-analytics/index.htm">Big Data &amp; Analytics</a></li>
+<li><a href="../../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</li>
+<li><a href="../../../industries/index.htm">Industries</a></li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#solutionsSec" aria-expanded="true" aria-controls="solutionsSec">
+<span class="menu-link">Solutions</span>
+</div>
+<div id="solutionsSec" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../solutions/index.htm">Overview</a></li>
+<li><a href="../../../solutions/technologies/index.htm">Technologies</a></li>
+<li><a href="../../../solutions/hire-developers/index.htm">Hire Developers</a></li>
+<li><a href="../../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#corporateSec" aria-expanded="true" aria-controls="corporateSec">
+<span class="menu-link">Corporate</span>
+</div>
+<div id="corporateSec" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../corporate/index.htm">Explore Xicom</a></li>
+<li><a href="../../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../../testimonials/index.htm">Testimonials</a></li>
+<li><a href="../../../careers/index.htm">Careers</a></li>
+<li><a href="../../../contact/index.htm">Contact Us</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="office-sec">
+<div class="">
+<div class="row">
+<div class="col">
+<div class="title"> OFFICES </div>
+</div>
+<div class="col">
+<p> 18 Bartol Street #1155 <br>
+San Francisco, California 94133 <br>
+United States. <br>
+Phone +1.408.878.3255 </p>
+</div>
+<div class="col">
+<p> 303-10 Opal Tower, Business <br>
+Bay Dubai, United <br>
+Arab Emirates. <br>
+Phone +971.529144795 </p>
+</div>
+<div class="col main-head">
+<p> C-1/134, Janak Puri <br>
+New Delhi <br>
+110058 India. <br>
+Phone +91.11.25502616 </p>
+</div>
+<div class="col">
+<div class="social-icons">
+<a href="https://www.facebook.com/xicomtechnologies" class="fb-icon" target="_blank"></a>
+<a href="https://www.twitter.com/xicomtech" class="tw-icon" target="_blank"></a>
+<a href="https://www.linkedin.com/company/xicom-technologies-ltd/" class="lnkd-icon" target="_blank"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section inner-banners blog-banner newupdate">
+<div class="container-fluid">
+<div class="banner-heading">
+<span class="red-text">Insights</span> for Digital Transformation
+</div>
+</div>
+</div>
+<script type="9fc8fc93ac37a1e157698073-text/javascript">
+	$(document).ready(function(){
+
+		$('link:last').after('<!--[if IE 9]><link href="https://www.xicom.biz/css/ie9.css" rel="stylesheet" type="text/css" /><![endif]-->');
+	})
+</script>
+<div id="wrapper">
+<div class="outer">
+
+<script src="../../../bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" type="9fc8fc93ac37a1e157698073-text/javascript"></script>
+<div id="filler" class="fix gry-bg">
+<div id="innerfill" class="section">
+<div class="container-fluid">
+<div class="row mr0">
+<div class="col-sm-9 left-blog">
+<div id="mainColumn">
+<div id="post-2632" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 22, 2018</span>
+<span class="categ-link"> <a href="../../category/mobile-app-development/index.htm" rel="category tag">Mobile App Development</a> </span>
+<span class="comments"><a href="../../top-tools-to-speed-up-your-mobile-app-development/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../top-tools-to-speed-up-your-mobile-app-development/index.htm" title="Top Tools to Speed Up Your Mobile App Development">Top Tools to Speed Up Your Mobile App Development</a></h2>
+<div class="entry">
+<p>This is an era of mobility and billions of people are now using smartphones and the mobile apps on daily basis across the world. To beat competition, every business now wants to have a mobile app. But building an app is a costly and intensive process, both in terms of time taken and financial resources required. Many times it happens that although you want to build a mobile app but you don’t have enough budget to build an expensive app or you want to get to market quickly to cash the opportunity. What should you do now? Should you trim app features or look elsewhere to speed up the application development process? In this article, we will discuss about the top tools which you can use to speed up your app development process so that you can release your mobile app quickly to the market with lesser cost for building an app. The tools which we will discuss now also help you to speed up your project development and as your project will be completed in lesser time hence you can spend more time on fixing the bugs and implementing features. Let’s start Parse Server The first tool about which we will discuss is Parse Server. It is an open source cloud back-end with lots of additional services like databases, push notifications, user management and file storage etc. It works like given below:- First you have to create an instance of Parse Server on a popular platform-as-a-service (PaaS) like Heroku.</p> </div>
+</div>
+<div id="post-2628" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 19, 2018</span>
+<span class="categ-link"> <a href="../../category/android-app-development/index.htm" rel="category tag">Android App Development</a> </span>
+<span class="comments"><a href="../../microsoft-announces-android-app-mirroring-on-windows-10/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../microsoft-announces-android-app-mirroring-on-windows-10/index.htm" title="Microsoft Announces Android App Mirroring on Windows 10">Microsoft Announces Android App Mirroring on Windows 10</a></h2>
+<div class="entry">
+<p>Microsoft is empowering a new era of personal productivity with new Surface devices. Microsoft is working to deliver its company mission of empowering every person and organization on the planet to achieve more therefore it has increased its focus on helping people across their work and personal lives. Microsoft is offering tools for whole life experiences and it has never been more important as many of us are living a digital lifestyle which presents more opportunities, yet demanding more of our time than ever before. Whether you are busy with your career and family and juggling between them or running a family as head of household or growing your career or education, your simple and greatest need is more time and the tools to do what matters most to you. &nbsp; Microsoft is finally offering something for the Android app developers and Android app users. Keeping these requirements of people in mind, Microsoft announced a new feature for Windows 10 in Microsoft Surface event held on 2nd Oct, 2018 in New York City which will let Android phone users view and use any app on their device from a Windows desktop. This feature which Microsoft is referring to as app mirroring and shows up in Windows as an app called Your Phone, seems to be working best with Android as of now. Microsoft also announced the ability to transfer webpages from an iPhone to a Windows 10 desktop hence you can pick up where you left off on your mobile</p> </div>
+</div>
+<div id="post-2624" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 15, 2018</span>
+<span class="categ-link"> <a href="../../category/xicom-technologies/index.htm" rel="category tag">Xicom Technologies / Reviews</a> </span>
+<span class="comments"><a href="../../why-hire-android-app-developer-for-video-integration-in-an-app/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../why-hire-android-app-developer-for-video-integration-in-an-app/index.htm" title="Why Hire Android App Developer For Video Integration In An App?">Why Hire Android App Developer For Video Integration In An App?</a></h2>
+<div class="entry">
+<p>We all have heard about the fact that a single picture is equal to one thousand words. This also holds true for any mobile app that is made interesting by the visuals or the videos that can be integrated into the app by the professionals of iOS app development or Android app development. There are ways by which the videos are put into the apps so that the app is made more exciting for the users and that is made more informational also. Visuals are liked by the humans and they love to see the things and learn about them rather than just read the boring stuff. It’s important to improve the  integration of the premium videos to the app and thus, enhance the user-experience, and distinguish the brand from competitors. A mobile app can do a lot of things, and the one who invests into the app with a new concept must know well how to choose the app&#8217;s internal features. Here are some of the exciting reasons that you should consider so as to choose the best iOS developer or a company which has had experience in creating such similar apps: 1. Enhancement of User-Interface of the app Use of videos into the app helps the developer make the app more interesting. People are visual creatures and want to watch videos instead of boring stuff. A video can be of any type- such as an informational video or a detailed video about the product or even an ad</p> </div>
+</div>
+<div id="post-2620" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 9, 2018</span>
+<span class="categ-link"> <a href="../../category/software-development/index.htm" rel="category tag">Software Development</a> </span>
+<span class="comments"><a href="../../how-can-a-mobile-app-creator-create-a-multilingual-app-easily/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../how-can-a-mobile-app-creator-create-a-multilingual-app-easily/index.htm" title="How can a mobile app creator create a multilingual app easily?">How can a mobile app creator create a multilingual app easily?</a></h2>
+<div class="bz_post_thumb"><img width="1200" height="627" src="../../wp-content/uploads/2018/10/The-Importance-Of-Multi-Language-Apps-And-How-To-Create-Them.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="../../wp-content/uploads/2018/10/The-Importance-Of-Multi-Language-Apps-And-How-To-Create-Them.png 1200w, ../../wp-content/uploads/2018/10/The-Importance-Of-Multi-Language-Apps-And-How-To-Create-Them-300x157.png 300w, ../../wp-content/uploads/2018/10/The-Importance-Of-Multi-Language-Apps-And-How-To-Create-Them-768x401.png 768w, ../../wp-content/uploads/2018/10/The-Importance-Of-Multi-Language-Apps-And-How-To-Create-Them-1024x535.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px"></div> <div class="entry">
+<p>It is not a surprising fact that almost 1.5 billion people speak English around the world and that is a huge number for sure! From this point of view, we can easily estimate that the proportion is 20% of the world&#8217;s population in total! Isn’t it? Why is English so popular and the importance of multi-language apps? English has always been considered as one of the most commonly used languages around the globe and by most of the people. It is also used as a &#8220;default language&#8221; for inventions such as the technology industry, such as websites and mobile applications by every app development company . Just as there are numerous cultures across the world speaking various languages and having various beliefs. Same is the case with the almost 7k languages that are being spoken by various people. English is still not on the number #1 position but it is Indeed, the most commonly used language in the world as it is Chinese, followed by Spanish, then English, then Hindi and so on. Reaching non-English speakers with multilingual apps! Obviously, the real world and the virtual environment have a variety of linguistic diversity. In today&#8217;s global markets, all companies can reach more audiences and connect with non-English speakers so that the opportunities for a wider global marketplace are expanded to a huge extent. By creating and deploying multilingual applications when any business hire mobile app developer , they can earn more customers with just a few clicks. Ways to develop</p> </div>
+</div>
+<div id="post-2611" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 4, 2018</span>
+<span class="categ-link"> <a href="../../category/mobile-app-development/index.htm" rel="category tag">Mobile App Development</a> </span>
+<span class="comments"><a href="../../how-mhealth-apps-are-improving-the-patient-experience/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../how-mhealth-apps-are-improving-the-patient-experience/index.htm" title="How mHealth Apps Are Improving the Patient Experience?">How mHealth Apps Are Improving the Patient Experience?</a></h2>
+<div class="bz_post_thumb"><img width="1200" height="627" src="../../wp-content/uploads/2018/10/How-mHealth-Apps-are-Improving-the-Patient-Experience.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="../../wp-content/uploads/2018/10/How-mHealth-Apps-are-Improving-the-Patient-Experience.png 1200w, ../../wp-content/uploads/2018/10/How-mHealth-Apps-are-Improving-the-Patient-Experience-300x157.png 300w, ../../wp-content/uploads/2018/10/How-mHealth-Apps-are-Improving-the-Patient-Experience-768x401.png 768w, ../../wp-content/uploads/2018/10/How-mHealth-Apps-are-Improving-the-Patient-Experience-1024x535.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px"></div> <div class="entry">
+<p>Till recently, hospitals used to be uncomfortable places for patients as their experience in hospitals regarding treatment options, consulting doctors and running around used to be very stressful. Today with the use of digital solutions in hospitals the situation is improving quite fast. As healthcare industry is focusing on digital solutions, it is not only transforming the patient experience but also improving patient’s medication and the rate of curing any disease. Healthcare professionals and hospitals are working on various ways to improve the patient experience through various engagement processes in order to meet he expectation of digital-savvy patients. &nbsp; Actually this is the right time for Android App Developers to jump in and create healthcare mobile apps as Android is the leader in app development market. It is also good time for the healthcare services to extend and improve their digital strategies. The patient experience is one of the top priority for healthcare services providers and also it leads to growth and profitability for these hospital services. For successful patient engagement there should be access to the right tools and technology. Patients now a days spend lots of time on their smart phones and smart devices hence now healthcare initiatives are focusing more on enhancing the patient experience through delivering personalized communication via mobile apps. &nbsp; No doubt, mobile apps are the future of digital services in the healthcare industry. Patients are looking for simple and user friendly tools from their providers. Mobile apps are effective tools for engaging and</p> </div>
+</div>
+<div id="post-2607" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 28, 2018</span>
+<span class="categ-link"> <a href="../../category/android-app-development/index.htm" rel="category tag">Android App Development</a> </span>
+<span class="comments"><a href="../../why-hire-mobile-app-development-company-for-food-delivery-app/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../why-hire-mobile-app-development-company-for-food-delivery-app/index.htm" title="Why Hire Mobile App Development Company For Food Delivery App">Why Hire Mobile App Development Company For Food Delivery App</a></h2>
+<div class="bz_post_thumb"><img width="1200" height="627" src="../../wp-content/uploads/2018/09/Why-your-restaurant-need-a-food-delivery-app.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="../../wp-content/uploads/2018/09/Why-your-restaurant-need-a-food-delivery-app.png 1200w, ../../wp-content/uploads/2018/09/Why-your-restaurant-need-a-food-delivery-app-300x157.png 300w, ../../wp-content/uploads/2018/09/Why-your-restaurant-need-a-food-delivery-app-768x401.png 768w, ../../wp-content/uploads/2018/09/Why-your-restaurant-need-a-food-delivery-app-1024x535.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px"></div> <div class="entry">
+<p>In this fast-paced Internet age, it is necessary and inevitable that every street corner restaurant or even a big hotel should have a website or a food delivery mobile application for iOS devices as well as for Android smartphones. Having a website gives branding and identity to the restaurant as well as helps the customers to know more about the hotel or a food corner. But, did you know that hiring a mobile application developer helps even more in creating a professional smartphone app? The scenario has changed and an app developer using the latest tools and techniques can create an extraordinary food delivery app for the hotel. Let’s suppose a situation- Nobody likes an empty fridge as you come from work at home. The tiredness may not allow you to cook anything nor does you have this much energy to cook something especially if you have kids or even a small family! It is always the restaurant food delivering app that comes to the rescue and acts as a great saviour. Food delivery app helps you to order food in just under 30 minutes and if the app is created by mobile app development company which is professional and has years of experience in creating such interesting apps for great user-experience. Food delivery apps certainly increase client retention It is certainly beneficial to run a restaurant, but income can only be generated on a large-scale through food distribution smartphone apps. This strategy effectively improves the return on investment.  Mobile</p> </div>
+</div>
+<div id="post-2599" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 21, 2018</span>
+<span class="categ-link"> <a href="../../category/mobile-app-development/index.htm" rel="category tag">Mobile App Development</a> </span>
+<span class="comments"><a href="../../why-hire-app-developer-for-professional-diet-and-nutrition-app/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../why-hire-app-developer-for-professional-diet-and-nutrition-app/index.htm" title="Why Hire App Developer for Professional Diet and Nutrition App?">Why Hire App Developer for Professional Diet and Nutrition App?</a></h2>
+<div class="entry">
+<p>The world is getting digitised and it has surely made an impact on the lifestyle of the people around the world. This is the reason why more and more smartphone users are looking for the apps that has unique functionalities and features to keep them fit and fine. This is possible by using an app built by a professional app development company only. &nbsp; If any unprofessional mobile app creator are hired for building a nutrition and diet app, then the app creator will not be much liked by the smartphone users at all! Health is taking a backseat in the lives of the people these days and it is the apps that the people expect to use in the times of busy schedules. Therefore, these diet and nutrition apps are getting popular among the smartphone users. No doubt about the fact that it is exercise and gymming that are really efficient in achieving body goals really fast. But, without maintaining healthy diet and nutrition in the food that we eat, it is almost impossible to see the benefits of gymming. After all, it is the most important thing that will only multiply the benefits of exercise routine. &nbsp; General Features of a diet and nutrition app are as following When a diet and nutrition app is built by an expert mobile app creator, it should have certain features that are as following. These are actually the generalised features that must be there in every app. Diet chart and other</p> </div>
+</div>
+<div id="post-2593" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 17, 2018</span>
+<span class="categ-link"> <a href="../../category/mobile-app-development/index.htm" rel="category tag">Mobile App Development</a> </span>
+<span class="comments"><a href="../../advantages-of-investing-into-app-development-company-for-healthcare-apps/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../advantages-of-investing-into-app-development-company-for-healthcare-apps/index.htm" title="Advantages of Investing into App Development Company for Healthcare Apps">Advantages of Investing into App Development Company for Healthcare Apps</a></h2>
+<div class="entry">
+<p>Life would seem to be a little scary now if the people around the world have to wait for hours and days to get their appointment from their preferred doctor’s clinic or hospital. It seems like traditional chain of booking the appointment for doctor after visiting the hospital, seems to fade away with the coming of the apps. More clinics and doctors are paying the app development company to get their personalised appointment apps as well as healthcare apps are build by the health professionals these days. The healthcare sector along with the advancement in every app development company has made the access to the healthcare facilities and services as well as booking for a visit to doctor’s place much easier and hassle-free irrespective of the time. An app is accessible 24/7 which means that an app user never falls into trouble no matter what! Whenever he needs to contact the doctor as well as get other services, everything is just a click away! In this post, we are going to discuss about the benefits that a healthcare app has for the users of the app: &nbsp; 1. Great health monitoring platform These days, when a hospital or a doctor hires app creator to create an app to reach the patients as well as contact them in case of emergency and daily health monitoring, things have become so much easier as compared to the past circumstances in the healthcare sector. Moreover, it has become cakewalk for the doctors to monitor</p> </div>
+</div>
+<div id="post-2585" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 10, 2018</span>
+<span class="categ-link"> <a href="../../category/software-development/index.htm" rel="category tag">Software Development</a> </span>
+<span class="comments"><a href="../../google-announces-android-9-pie-powered-by-ai-for-a-smarter-and-simpler-experience/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../google-announces-android-9-pie-powered-by-ai-for-a-smarter-and-simpler-experience/index.htm" title="Google Announces Android 9 Pie, powered by AI for a Smarter and Simpler Experience">Google Announces Android 9 Pie, powered by AI for a Smarter and Simpler Experience</a></h2>
+<div class="bz_post_thumb"><img width="1200" height="627" src="../../wp-content/uploads/2018/09/Google-Announces-Android-9-Pie-powered-by-AI-for-a-Smarter-and-Simpler-Experience-.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="../../wp-content/uploads/2018/09/Google-Announces-Android-9-Pie-powered-by-AI-for-a-Smarter-and-Simpler-Experience-.png 1200w, ../../wp-content/uploads/2018/09/Google-Announces-Android-9-Pie-powered-by-AI-for-a-Smarter-and-Simpler-Experience--300x157.png 300w, ../../wp-content/uploads/2018/09/Google-Announces-Android-9-Pie-powered-by-AI-for-a-Smarter-and-Simpler-Experience--768x401.png 768w, ../../wp-content/uploads/2018/09/Google-Announces-Android-9-Pie-powered-by-AI-for-a-Smarter-and-Simpler-Experience--1024x535.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px"></div> <div class="entry">
+<p>Google has finally released the latest Android 9 Pie operating system for Android mobile phones. It is highly powered by Artificial Intelligence (AI) and makes your phone more smarter, simpler and more customized as per your preferences. Google releases Android 9 Pie officially on 6th Aug 2018.  Google has built Android 9 to learn from you and to work better for you as more and more you use it. Some of its highlights are:- predicting your next task so that you can start the action quickly, prioritizing battery power for the apps you use most, helping you disconnect from your phone at the end of the day. Android 9 takes care of your health and adapts to your life and the ways you like to use your phone using lots of AI. Therefore, it is also a good opportunity for any Android App Creator to use these newly launched AI features in the Android 9 Pie platform and develop more smart, interactive, simpler and amazing Android apps for the users. Customized to You Android 9 makes your phone more smarter by learning from you and adapting to your usage patterns. That’s why Android 9 has features like Adaptive Battery, which learns itself which apps your use the most and then prioritizes battery for them. Other feature is Adaptive Brightness, which learns how you like to set the brightness in different settings and implements it for you. Android 9 Pie also helps you get things done much faster with App Actions</p> </div>
+</div>
+<div id="post-2580" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 6, 2018</span>
+<span class="categ-link"> <a href="../../category/android-app-development/index.htm" rel="category tag">Android App Development</a>, <a href="../../category/mobile-app-development/index.htm" rel="category tag">Mobile App Development</a> </span>
+<span class="comments"><a href="../../best-hybrid-mobile-app-development-company-in-san-francisco/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../best-hybrid-mobile-app-development-company-in-san-francisco/index.htm" title="Best Hybrid Mobile App Development Company In San Francisco">Best Hybrid Mobile App Development Company In San Francisco</a></h2>
+<div class="entry">
+<p>Xicom Technologies Ltd.- a front runner in hybrid app development for broad range of clients across the world. Our team is well-skilled and professional at the agile and scrum technologies which are the need of the hour today. Without deploying the most advanced and time-saving tools and software, it is almost impossible to give an edge to your clients over their competitors. It’s our endeavor to understand the client requirements at the core level and then prepare a series of actions that are taken in order to create the best mobile apps for them. Your business endeavors are successful with a pro app The experts at Xicom Technologies are adept at creating apps that are designed and developed in order to bring huge profits to the businesses of the clients that hire them. Well, highly-certified developers for hybrid app development make sure that you are able to keep you head high and stand apart from the crowd. In this highly competitive environment, if the app creator you choose is not expert and talented enough to handle the technical nuances of developing an extraordinary app, then all the money invested can go waste. 5 Key Reasons to Invest in developing a dynamic business app There are some key reasons why you should always focus on hiring a pro app creator: 1. A professional app developer has the right kind of experience of developing an app that can give the best app user-experience. 2. An app is the best promotional tool one</p> </div>
+</div>
+<div id="paginateIndex" class="fix">
+<p><span class="left"><a href="../12/index.htm">Previous</a></span> <span class="right"><a href="../14/index.htm">Next</a></span></p>
+</div>
+</div>
+</div>
+<div class="col-sm-3 right-blog">
+<div class="secondaryColumn">
+<div id="text-10" class="widgetContainer widget_text"> <div class="textwidget"><div class="contact-bar">
+<h3>Looking for<br> Certified & <br>Experienced <br><span class="red-text">Developers</span></h3>
+<ul>
+<li>300+ Experts</li>
+<li>Flexible Engagement</li>
+<li>NDA Protection</li>
+<li>100% Satisfaction</li>
+<li>24X7 Support</li>
+<li>Moneyback Guarantee</li>
+</ul>
+<div class="contact-bttn">
+<a href="../../../contact/index.htm">Contact Now!</a>
+</div>
+</div></div>
+</div><div id="text-3" class="widgetContainer widget_text"><h3 class="widgetTitle">Xicom Technologies Ltd.</h3> <div class="textwidget">Founded in the year 2002, Xicom is a ISO 9001 certified software development company with a strong team of 300+ highly skilled IT experts, catering result-oriented and cost-competitive solutions to SME's across the world.</div>
+</div> <div id="recent-posts-3" class="widgetContainer widget_recent_entries"> <h3 class="widgetTitle">Recent Posts</h3> <ul>
+<li>
+<a href="../../why-php-is-still-good-for-web-development/index.htm">What Makes PHP a Still Good Choice For Web Development?</a>
+</li>
+<li>
+<a href="../../build-a-web-app/index.htm">Estimating the Web App Development Cost: How To Set the Budget Rightly?</a>
+</li>
+<li>
+<a href="../../businesses-should-invest-in-enterprise-applications/index.htm">Why Do Businesses Should Invest In Enterprise Application?</a>
+</li>
+<li>
+<a href="../../build-a-enterprise-mobile-application/index.htm">Build A Successful Enterprise Application For Your Business</a>
+</li>
+<li>
+<a href="../../understanding-the-app-budget-by-app-type/index.htm">Mobile App Development Cost: Understanding The App Budget By App Type in 2022</a>
+</li>
+<li>
+<a href="../../cost-to-create-a-game-app/index.htm">How Much Does It Cost To Develop a Gaming App?</a>
+</li>
+<li>
+<a href="../../build-a-food-delivery-app-like-ubereats/index.htm">How to build a food delivery app like Ubereats and Deliveroo</a>
+</li>
+<li>
+<a href="../../make-a-successful-messaging-app/index.htm">How To Make A Successful Messaging App In 2021?</a>
+</li>
+<li>
+<a href="../../cost-to-make-a-fitness-app/index.htm">How Much Does It Cost to Make a Fitness App</a>
+</li>
+<li>
+<a href="../../find-the-right-development-partner-in-san-francisco-usa/index.htm">How to find the right development partner in San Francisco, USA</a>
+</li>
+</ul>
+</div><div id="categories-3" class="widgetContainer widget_categories"><h3 class="widgetTitle">Blog Categories</h3> <ul>
+<li class="cat-item cat-item-198"><a href="../../category/android-app-development/index.htm">Android App Development</a>
+</li>
+<li class="cat-item cat-item-80"><a href="../../category/asp-net-development/index.htm">ASP.NET Development</a>
+</li>
+<li class="cat-item cat-item-384"><a href="../../category/asp-net-development/asp-net-development-company/index.htm">ASP.NET Development Company</a>
+</li>
+<li class="cat-item cat-item-334"><a href="../../category/big-data-analytics/index.htm">Big Data Analytics</a>
+</li>
+<li class="cat-item cat-item-290"><a href="../../category/blockchain-development/index.htm">Blockchain Development</a>
+</li>
+<li class="cat-item cat-item-309"><a href="../../category/cloud-computing/index.htm">Cloud Computing</a>
+</li>
+<li class="cat-item cat-item-127"><a href="../../category/cms-development/index.htm">CMS Development</a>
+</li>
+<li class="cat-item cat-item-231"><a href="../../category/cross-platform-app-development/index.htm">Cross Platform App Development</a>
+</li>
+<li class="cat-item cat-item-213"><a href="../../category/ecommerce-development/index.htm">Ecommerce Development</a>
+</li>
+<li class="cat-item cat-item-388"><a href="../../category/hire-app-developers/index.htm">hire app developers</a>
+</li>
+<li class="cat-item cat-item-382"><a href="../../category/hire-magento-developer/index.htm">Hire Magento Developer</a>
+</li>
+<li class="cat-item cat-item-376"><a href="../../category/hire-mobile-app-developer/index.htm">Hire Mobile App Developer</a>
+</li>
+<li class="cat-item cat-item-375"><a href="../../category/hire-software-developer/index.htm">Hire software developer</a>
+</li>
+<li class="cat-item cat-item-294"><a href="../../category/iot-development/index.htm">Internet of Things (IoT)</a>
+</li>
+<li class="cat-item cat-item-54"><a href="../../category/ios-app-development/index.htm">iOS App Development</a>
+</li>
+<li class="cat-item cat-item-148"><a href="../../category/java-development/index.htm">Java Development</a>
+</li>
+<li class="cat-item cat-item-383"><a href="../../category/java-development/java-development-company/index.htm">Java development company</a>
+</li>
+<li class="cat-item cat-item-170"><a href="../../category/magento-development/index.htm">Magento Development</a>
+</li>
+<li class="cat-item cat-item-53"><a href="../../category/mobile-app-development/index.htm">Mobile App Development</a>
+</li>
+<li class="cat-item cat-item-391"><a href="../../category/mobile-app-development-companies-in-india/index.htm">Mobile App Development Companies in India</a>
+</li>
+<li class="cat-item cat-item-377"><a href="../../category/mobile-app-development/mobile-app-development-company/index.htm">Mobile app development company</a>
+</li>
+<li class="cat-item cat-item-389"><a href="../../category/mobile-app-development-company-2/index.htm">mobile app development company</a>
+</li>
+<li class="cat-item cat-item-392"><a href="../../category/mobile-app-development-company-india/index.htm">Mobile App Development Company India</a>
+</li>
+<li class="cat-item cat-item-387"><a href="../../category/outsourcing-software-development-company/index.htm">outsourcing software development company</a>
+</li>
+<li class="cat-item cat-item-49"><a href="../../category/php-development/index.htm">PHP Development</a>
+</li>
+<li class="cat-item cat-item-4"><a href="../../category/software-development/index.htm">Software Development</a>
+</li>
+<li class="cat-item cat-item-426"><a href="../../category/software-development-company-in-india/index.htm">software development company in india</a>
+</li>
+<li class="cat-item cat-item-3"><a href="../../category/web-development/index.htm">Web Development</a>
+</li>
+<li class="cat-item cat-item-390"><a href="../../category/web-development/web-development-company/index.htm">web development company</a>
+</li>
+<li class="cat-item cat-item-14"><a href="../../category/xicom-technologies/index.htm">Xicom Technologies / Reviews</a>
+</li>
+</ul>
+</div>
+</div> <div class="side-logos">
+<div class="half-logo clutch">
+<a href="https://clutch.co/profile/xicom-technologies">
+<img src="../../wp-content/themes/grid_focus/gridfocus/images/Mobile_App_Developers_2019.png" alt="Clutch">
+</a>
+</div>
+<div class="half-logo good_firms"><a target="_blank" href="https://www.goodfirms.co/companies/view/3935/xicom-technologies"><img style="width:240px" src="../../../badges/blue-button/app-development.svg" alt="GoodFirms Badge"></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<footer class="footer">
+<div class="inner-footer">
+<div class="container-fluid">
+<div class="accordion row col-sm-12" id="accordionExample">
+<div class="menu-listing col contact-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+Offices</button>
+<span class="footer-head hide-xs"><a href="../../../contact/index.htm">Offices</a></span>
+<div id="collapseOne" class="collapse vd show" aria-labelledby="headingOne" data-parent="#accordionExample">
+<p>
+18 Bartol Street #1155 <br>
+San Francisco, California 94133 <br>
+United States. <br>
+Phone +1.408.878.3255<br>
+</p>
+<p>
+<a class="address-map" href="https://goo.gl/maps/TQTzgzV8FP22" target="_blank">
+301-10 Opal Tower, Business Bay <br>
+Dubai, United Arab Emirates.</a><br>
+Phone +971.529144795<br>
+</p>
+<p>
+<a class="address-map" href="https://goo.gl/maps/TQTzgzV8FP22" target="_blank">
+C-1/134, Janak Puri, New Delhi<br>
+110058 India.</a><br>
+Phone +91.11.25502616<br>
+</p>
+</div>
+</div>
+<div class="menu-listing col service-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+Services</button>
+<span class="footer-head hide-xs"><a href="../../../services/index.htm">Services</a></span>
+<div id="collapseTwo" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../services/web-development/index.htm">Web Development</a></li>
+<li><a href="../../../services/mobile-app-development/index.htm">Mobile App Development</a></li>
+<li><a href="../../../services/software-development/index.htm">Software Development</a></li>
+<li><a href="../../../services/consulting/index.htm">IT Consulting </a></li>
+</ul>
+</div>
+</div>
+<div class="menu-listing col solution-col">
+<div class="inner-nav">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+Latest Thinking</button>
+<span class="footer-head hide-xs"><a href="../../../latest-thinking/index.htm">Latest Thinking</a></span>
+<div id="collapseThree" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../latest-thinking/big-data-analytics/index.htm">Big Data & Analytics</a></li>
+<li><a href="../../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</div>
+<div class="inner-nav mb0">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+Solutions</button>
+<span class="footer-head hide-xs"><a href="../../../solutions/index.htm">Solutions</a></span>
+<div id="collapseSix" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../solutions/technologies/index.htm">Technologies</a></li>
+<li><a href="../../../solutions/hire-developers/index.htm">Hire Developers</a></li>
+<li><a href="../../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="menu-listing col company-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+Corporate
+</button>
+<span class="footer-head hide-xs"><a href="../../../corporate/index.htm">Corporate</a></span>
+<div id="collapseFour" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../industries/index.htm">Industries </a></li>
+<li><a href="../../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../../contact/index.htm">Contact Us</a></li>
+<li><a href="../../../careers/index.htm">Careers</a></li>
+<li><a href="../../index.htm">Blog</a></li>
+<li><a href="../../../terms/index.htm">Terms of Use</a></li>
+<li><a href="../../../privacy/index.htm">Privacy Policy</a></li>
+<li><a href="../../../sitemap/index.htm">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="menu-listing col hvQues">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+Have Questions?
+</button>
+<span class="footer-head hide-xs">Have Questions?</span>
+<div class="phone-contact">Get in touch with us <a href="tel:+1.408.878.3255"><span class="number">+1.408.878.3255</span></a></div>
+<div id="collapseFive" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<div class="rowfull">
+Skype: <a href="skype:xicom.sales">xicom.sales</a><br>
+Email: <a href="../../../cdn-cgi/l/email-protection.html#88fbe9e4edfbc8f0e1ebe7e5a6eae1f2"><span class="__cf_email__" data-cfemail="a8dbc9c4cddbe8d0c1cbc7c586cac1d2">[email&#160;protected]</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-footer">
+<div class="container-fluid">
+<div class="row copyright">
+<div class="col-sm-7 copy">
+<p> Copyright 2002-2023 Xicom Technologies Ltd. </p>
+<div class="rateit-wrap">
+<div class="overall social-foot">
+<div class="content" itemscope="" itemtype="http://schema.org/Product">
+<meta itemprop="description" content="Xicom is a ISO 9001 certified software development company providing custom, offshore software, mobile app and web application development services in Dubai, UAE.">
+<input type="hidden" name="post_id" id="rating_post_id">
+<input type="hidden" name="currentrate" id="currentrate" value="5835">
+<span> Rated <span id="ratingValue">4.8 </span>
+out of 5.0
+<meta itemprop="name" content="Software, Web, Mobile App Development Company">
+<link itemprop="image" href="https://www.xicom.ae/"> by </span>
+<span class="client-project" style="display: inline-block;">
+<div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope="">
+<meta itemprop="reviewCount" content="5835">
+<meta itemprop="ratingValue" content="4.8">
+</div>
+<div itemprop="review" itemtype="http://schema.org/Review" itemscope="">
+<div itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+<meta itemprop="name" content="Xicom">
+</div>
+<div itemprop="reviewRating" itemtype="http://schema.org/Rating" itemscope="">
+<meta itemprop="ratingValue" content="5">
+<meta itemprop="bestRating" content="5">
+</div>
+</div> <span id="totalClient"> 5835</span>+ Xicom clients on over 8350+ projects</span>
+<div itemprop="brand" itemtype="http://schema.org/Thing" itemscope="">
+<meta itemprop="name" content="Xicom">
+</div>
+</div>
+<input type="hidden" name="rating_page_url" value="mobile-app-development.php" id="rating_page_url">
+</div>
+</div>
+</div>
+<div class="col-sm-3 footer-logos">
+<a href="https://clutch.co/profile/xicom-technologies" class="f-logo cluth" target="_blank"> </a>
+<a href="https://www.goodfirms.co/companies/view/3935/xicom-technologies" class="f-logo good-firm" target="_blank"> </a>
+</div>
+<div class="col-sm-2 social-icons">
+<a href="https://www.facebook.com/xicomtechnologies" class="fb-icon" target="_blank"></a>
+<a href="https://www.twitter.com/xicomtech" class="tw-icon" target="_blank"></a>
+<a href="https://www.linkedin.com/company/xicom-technologies-ltd/" class="lnkd-icon" target="_blank"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="live-chat" id="status">
+<a href="#" class="blue-btn"> Live Chat </a>
+</div>
+
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="9fc8fc93ac37a1e157698073-text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/573d53a6a8b2e6115f951546/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+<script type="9fc8fc93ac37a1e157698073-text/javascript">
+Tawk_API = Tawk_API || {};
+Tawk_API.onStatusChange = function (status){
+
+if(status === 'online')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+else if(status === 'away')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+else if(status === 'offline')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+};
+Tawk_API.onOfflineSubmit = function(data){ 
+window.location= document.location.origin + "/contact/thanks.html"; 
+};
+Tawk_API.onChatStarted = function(){
+};
+</script>
+
+</footer>
+<script type="9fc8fc93ac37a1e157698073-text/javascript" src="../../wp-includes/js/wp-embed.min.js?ver=5.1.16"></script>
+<script src="../../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="9fc8fc93ac37a1e157698073-|49" defer=""></script></body>
+</html>

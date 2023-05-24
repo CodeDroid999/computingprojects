@@ -1,0 +1,889 @@
+﻿<!DOCTYPE html>
+<html>
+<head profile="https://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ASP.NET Development | Xicom</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="WordPress 5.1.16">
+<link rel="shortcut icon" href="../../wp-content/themes/grid_focus/gridfocus/images/favicon/favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="Xicom Blog | Software, Mobile App, Web Application Development RSS Feed" href="../../feed/index.htm">
+
+<link rel="stylesheet" href="../../../bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="../../../css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<link href="../../../css-1?family=Lato:300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.xicom.biz/blog/wp-content/themes/grid_focus/gridfocus/css/fonts/font-awesome-4/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="../../wp-content/themes/grid_focus/gridfocus/css/fonts/stylesheet.css">
+<link type="text/css" rel="stylesheet" href="../../wp-content/themes/grid_focus/gridfocus/css/reset.css">
+<link rel="stylesheet" href="../../wp-content/themes/grid_focus/gridfocus/style.css" type="text/css" media="screen">
+<link type="text/css" rel="stylesheet" href="../../wp-content/themes/grid_focus/gridfocus/css/responsive.css">
+<script src="../../../ajax/libs/jquery/1.10.2/jquery.min.js" type="ce3223cfd3be63521909afcd-text/javascript"></script>
+<script src="../../wp-content/themes/grid_focus/gridfocus/js/owl.carousel.js" type="ce3223cfd3be63521909afcd-text/javascript"></script>
+<script src="../../wp-content/themes/grid_focus/gridfocus/js/custom.js" type="ce3223cfd3be63521909afcd-text/javascript"></script>
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Xicom Blog | Software, Mobile App, Web Application Development &raquo; ASP.NET Development Category Feed" href="feed/index.htm">
+<script type="ce3223cfd3be63521909afcd-text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.xicom.biz\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.16"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55358,56760,9792,65039],[55358,56760,8203,9792,65039])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../wp-includes/css/dist/block-library/style.min.css?ver=5.1.16" type="text/css" media="all">
+<script type="ce3223cfd3be63521909afcd-text/javascript" src="../../wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="ce3223cfd3be63521909afcd-text/javascript" src="../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.htm">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.xicom.biz/blog/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.1.16">
+
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="index.htm">
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.xicom.biz/blog/dotnet-vs-java-a-detailed-comparison/">
+<meta property="og:title" content=".NET vs Java — A Detailed Comparison">
+<meta property="og:description" content="Java and Microsoft .NET are two popular software development technologies ">
+<meta property="og:site_name" content="Xicom Blog | Software, Mobile App, Web Application Development">
+<meta property="og:image" content="https://www.xicom.biz/blog/wp-content/uploads/2020/06/feature2-1.jpg">
+<meta property="og:image:alt" content="">
+<meta property="og:image:width" content="900">
+<meta property="og:image:height" content="600">
+<meta itemscope="" itemtype="article">
+<meta itemprop="description" content="Java and Microsoft .NET are two popular software development technologies ">
+<meta itemprop="image" content="https://www.xicom.biz/blog/wp-content/uploads/2020/06/feature2-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.xicom.biz/blog/dotnet-vs-java-a-detailed-comparison/">
+<meta name="twitter:title" content=".NET vs Java — A Detailed Comparison">
+<meta name="twitter:description" content="Java and Microsoft .NET are two popular software development technologies ">
+<meta name="twitter:image" content="https://www.xicom.biz/blog/wp-content/uploads/2020/06/feature2-1.jpg">
+<style type="text/css" id="wp-custom-css">
+			.table-image.table {
+    border-left: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    margin: 20px auto;
+}
+
+.table-image.table th, .table-image.table td {
+    padding: 5px 15px;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #758495;
+    border-right: 1px solid #dee2e6;
+}
+
+.table-image.table th {
+    background: #022a5e;
+    color: #fff;
+}
+
+@media screen and (max-width:567px){
+	.table-image.table tr th, .table-image.table tr td {font-size: 13px;}
+/*	.table-image.table tr th, .table-image.table tr td { flex: 0 0 100%; height: 50%; font-size: 13px; padding: 5px 10px; width: 150px; display: flex; align-items: center; justify-content: center;}
+
+.table-image.table tbody tr { display: flex; flex-wrap: wrap; height: 100%;}
+
+.table-image.table tbody, .table-image.table thead { display: flex;}
+.table-image.table { display:flex; overflow:auto;}
+.table-image.table thead {    position: sticky; left: 0;}
+	.table-image.table tr th {border-bottom: 1px solid #909ba8; border-top:0;}*/
+}
+		</style>
+
+<script async="" src="../../../gtag/js-1?id=UA-25100098-3" type="ce3223cfd3be63521909afcd-text/javascript"></script>
+<script type="ce3223cfd3be63521909afcd-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+//   gtag('config', 'UA-25100098-3');
+  gtag('config', 'UA-25100098-1', { 'optimize_id': 'GTM-KCG4WZC'});
+</script>
+</head>
+<body>
+<script type="ce3223cfd3be63521909afcd-application/javascript">
+	<!--
+	function popitup(url) {
+		newwindow=window.open(url,'name','height=465,width=460,scrollbars=yes,menubar=no,toolbar=no,resizable=false,location=no');
+
+		if (window.focus) {newwindow.focus()}
+		return false;
+	}
+	// -->
+</script>
+
+<script type="ce3223cfd3be63521909afcd-text/javascript" language="Javascript" src="../../../js/validation.js"></script>
+<script type="ce3223cfd3be63521909afcd-text/javascript">
+//declare function
+function validateContact()
+{
+	var error = false;	
+	if (isEmpty('form2', 'contactPerson1'))
+	{
+		$("#contactPerson1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#contactPerson1").removeClass('error');
+		//error = false;
+	}
+	if (isEmpty('form2', 'email1'))
+	{
+		$("#email1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#email1").removeClass('error');
+		//error = false;
+	}
+	if (isEmpty('form2', 'phone1'))
+	{
+		$("#phone1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#phone1").removeClass('error');
+		//error = false;
+	}
+	
+	
+	if (isEmpty('form2', 'description1'))
+	{
+		$("#description1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#description1").removeClass('error');
+		//error = false;
+	}	
+
+	if (error)
+	{		
+		return false;
+	}
+	else
+	{
+		$("#form2").submit();
+	}
+}
+</script>
+
+<div class="container-fluid header-wht">
+<header class="logo-navbar">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+<div class="header-container">
+<div class="inner-overlay"> </div>
+<div class="row header-row">
+<div class="navbar-header col-sm-2">
+<a class="navbar-toggle">
+<div class="sr-only"><div class="header-heading">Software, Mobile App, Web Application Development Company, Services India, USA</div></div>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a href="../../../index.htm" class="logo"></a>
+</div>
+<div class="col-sm-10 right-menu">
+<nav id="slidemenu">
+<div class="inner-menu">
+<div class="navbar-toggle cross">
+<span class="first"></span>
+<span class="second"></span>
+</div>
+<ul id="navigation" class="nav navbar-nav">
+<li class="nav-item"> <a href="../../../services/index.htm">Services</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li> <a href="../../../services/web-development/index.htm"> Web Development </a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../../services/ecommerce-development/index.htm"> Ecommerce Development </a></li>
+<li> <a href="../../../services/content-management-system/index.htm"> Content Management System (CMS) </a></li>
+</ul>
+</li>
+<li> <a href="../../../services/mobile-app-development/index.htm"> Mobile App Development </a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../../services/android-app-development/index.htm"> Android App Development </a></li>
+<li> <a href="../../../services/ios-app-development/index.htm"> iOS App Development </a></li>
+
+<li> <a href="../../../services/react-native-app-development/index.htm"> React Native App Development </a></li>
+<li> <a href="../../../services/flutter-app-development/index.htm"> Flutter App Development </a></li>
+<li> <a href="../../../services/augmented-reality/index.htm"> Augmented Reality / VR </a></li>
+</ul>
+</li>
+<li> <a href="../../../services/software-development/index.htm"> Software Development </a> </li>
+<li> <a href="../../../services/consulting/index.htm"> IT Consulting Services</a></li>
+<li> <a href="../../../services/quality-assurance-testing/index.htm"> Quality Assurance &amp; Testing </a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../../latest-thinking/index.htm">Latest Thinking</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../latest-thinking/big-data-analytics/index.htm">Big Data &amp; Analytics</a></li>
+<li><a href="../../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"><a href="../../../industries/index.htm">Industries</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../industries/automotive/index.htm">Automotive</a></li>
+<li><a href="../../../industries/entertainment/index.htm"> Media and Entertainment </a></li>
+<li><a href="../../../industries/healthcare/index.htm"> Healthcare </a></li>
+<li><a href="../../../industries/manufacturing/index.htm"> Manufacturing </a></li>
+<li><a href="../../../industries/finance/index.htm"> Banking and Finance </a></li>
+<li><a href="../../../industries/real-estate/index.htm"> Real Estate </a></li>
+<li><a href="../../../industries/retail/index.htm"> Retail and Ecommerce </a></li>
+<li><a href="../../../industries/logistics/index.htm"> Logistics and Transportation </a></li>
+<li><a href="../../../industries/travel/index.htm"> Travel and Tourism </a></li>
+<li><a href="../../../industries/education/index.htm"> Education and E-Learning </a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../../solutions/index.htm">Solutions</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../solutions/technologies/index.htm"> Technologies </a>
+<ul class="sub-menu inner-sub">
+<li><a href="../../../offerings/mobile-app-development/index.htm" title="Mobile App Development"> Mobile App Development </a></li>
+<li><a href="../../../offerings/android-development/index.htm" title="Android App Development"> Android App Development </a></li>
+<li><a href="../../../offerings/iphone-development/index.htm" title="iOS App Development"> iOS App Development </a></li>
+
+<li> <a href="../../../services/react-native-app-development/index.htm"> React Native App Development </a></li>
+<li> <a href="../../../services/flutter-app-development/index.htm"> Flutter App Development </a></li>
+<li><a href="../../../offerings/java-development/index.htm" title="Java Development"> Java Development </a></li>
+<li><a href="../../../offerings/asp.net-development/index.htm" title="ASP.NET Development"> ASP.NET Development </a></li>
+<li><a href="../../../offerings/php-development/index.htm" title="PHP Development"> PHP Development </a></li>
+<li><a href="../../../offerings/magento-development/index.htm" title="Magento Development"> Magento Development </a></li>
+<li><a href="../../../offerings/ecommerce-development/index.htm" title="Ecommerce Development"> Ecommerce Development </a></li>
+<li><a href="../../../offerings/web-development/index.htm" title="Web Development"> Web Development </a></li>
+<li><a href="../../../offerings/software-development/index.htm" title="Software Development"> Software Development </a></li>
+</ul>
+</li>
+<li><a href="../../../solutions/hire-developers/index.htm">Hire Developers</a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../../offerings/hire-mobile-developers/index.htm" title="Hire Mobile App Developers">Hire Mobile App Developers</a></li>
+<li><a href="../../../offerings/hire-android-developers/index.htm" title="Hire Android App Developers">Hire Android App Developers</a></li>
+<li> <a href="../../../offerings/hire-iphone-developers/index.htm" title="Hire iPhone App Developers">Hire iOS App Developers</a></li>
+
+<li><a href="../../../offerings/hire-react-native-developers/index.htm" title="Hire React Native Developers">Hire React Native Developers</a></li>
+<li> <a href="../../../offerings/hire-flutter-developers/index.htm" title="Hire Flutter App Developers">Hire Flutter App Developers</a></li>
+<li> <a href="../../../offerings/hire-java-programmers/index.htm" title="Hire Java Developers">Hire Java Developers</a></li>
+<li><a href="../../../offerings/hire-asp.net-programmers/index.htm" title="Hire ASP.NET Developers">Hire ASP.NET Developers</a></li>
+<li> <a href="../../../offerings/hire-php-programmers/index.htm" title="Hire PHP Developers">Hire PHP Developers</a></li>
+<li> <a href="../../../offerings/hire-magento-developers/index.htm" title="Hire Magento Developers">Hire Magento Developers</a></li>
+<li> <a href="../../../offerings/hire-ecommerce-developers/index.htm" title="Hire Ecommerce Developers">Hire Ecommerce Developers</a></li>
+<li> <a href="../../../offerings/hire-web-developers/index.htm" title="Hire Web Developers">Hire Web Developers</a></li>
+<li> <a href="../../../offerings/hire-software-developers/index.htm" title="Hire Software Developers">Hire Software Developers</a></li>
+</ul>
+</li>
+<li><a href="../../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../../corporate/index.htm">Corporate</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../../testimonials/index.htm">Testimonials</a></li>
+<li><a href="../../index.htm">Blog</a></li>
+<li><a href="../../../careers/index.htm">Careers</a></li>
+<li><a href="../../../contact/index.htm">Contact Us</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item contact-num"><a href="tel:+1.408.878.3255">+1.408.878.3255</a></li>
+</ul>
+</div>
+</nav>
+<div class="fr"><a href="../../../contact/index.htm" class="contact-number">Get Free Estimation</a></div>
+<div class="call-circle"><a class="calling" href="tel:+1.408.878.3255"> </a></div>
+<div class="nav-menu">
+<span> </span>
+<span class="right-ar"> </span>
+<span> </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="full-screen-menu section fadeIn">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-7 menu-content">
+<div class="menu-title">
+Inspire The <span class="blueTxt">Next.</span>
+</div>
+<a href="../../../contact/index.htm" class="red-btn"><div class="circle-dot wht-circle"> </div>Get Free Estimation</a>
+</div>
+<div class="col-sm-5 right-menu accordion" id="accordionExample1">
+<ul class="side-navigation">
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#serviceOne" aria-expanded="true" aria-controls="serviceOne">
+<span class="menu-link">Services</span>
+</div>
+<div id="serviceOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../services/index.htm">Overview</a></li>
+<li><a href="../../../services/web-development/index.htm">Web Development</a></li>
+<li><a href="../../../services/mobile-app-development/index.htm">Mobile App Development</a></li>
+<li><a href="../../../services/software-development/index.htm">Software Development</a></li>
+<li><a href="../../../services/consulting/index.htm">IT Consulting </a></li>
+<li> <a href="../../../services/quality-assurance-testing/index.htm"> Quality Assurance &amp; Testing </a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#latestThink" aria-expanded="true" aria-controls="latestThink">
+<span class="menu-link">Latest Thinking</span>
+</div>
+<div id="latestThink" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../latest-thinking/index.htm">Overview</a></li>
+<li><a href="../../../latest-thinking/big-data-analytics/index.htm">Big Data &amp; Analytics</a></li>
+<li><a href="../../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</li>
+<li><a href="../../../industries/index.htm">Industries</a></li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#solutionsSec" aria-expanded="true" aria-controls="solutionsSec">
+<span class="menu-link">Solutions</span>
+</div>
+<div id="solutionsSec" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../solutions/index.htm">Overview</a></li>
+<li><a href="../../../solutions/technologies/index.htm">Technologies</a></li>
+<li><a href="../../../solutions/hire-developers/index.htm">Hire Developers</a></li>
+<li><a href="../../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#corporateSec" aria-expanded="true" aria-controls="corporateSec">
+<span class="menu-link">Corporate</span>
+</div>
+<div id="corporateSec" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../corporate/index.htm">Explore Xicom</a></li>
+<li><a href="../../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../../testimonials/index.htm">Testimonials</a></li>
+<li><a href="../../../careers/index.htm">Careers</a></li>
+<li><a href="../../../contact/index.htm">Contact Us</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="office-sec">
+<div class="">
+<div class="row">
+<div class="col">
+<div class="title"> OFFICES </div>
+</div>
+<div class="col">
+<p> 18 Bartol Street #1155 <br>
+San Francisco, California 94133 <br>
+United States. <br>
+Phone +1.408.878.3255 </p>
+</div>
+<div class="col">
+<p> 303-10 Opal Tower, Business <br>
+Bay Dubai, United <br>
+Arab Emirates. <br>
+Phone +971.529144795 </p>
+</div>
+<div class="col main-head">
+<p> C-1/134, Janak Puri <br>
+New Delhi <br>
+110058 India. <br>
+Phone +91.11.25502616 </p>
+</div>
+<div class="col">
+<div class="social-icons">
+<a href="https://www.facebook.com/xicomtechnologies" class="fb-icon" target="_blank"></a>
+<a href="https://www.twitter.com/xicomtech" class="tw-icon" target="_blank"></a>
+<a href="https://www.linkedin.com/company/xicom-technologies-ltd/" class="lnkd-icon" target="_blank"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section inner-banners blog-banner newupdate">
+<div class="container-fluid">
+<div class="banner-heading">
+<span class="red-text">Insights</span> for Digital Transformation
+</div>
+</div>
+</div>
+<script type="ce3223cfd3be63521909afcd-text/javascript">
+	$(document).ready(function(){
+
+		$('link:last').after('<!--[if IE 9]><link href="https://www.xicom.biz/css/ie9.css" rel="stylesheet" type="text/css" /><![endif]-->');
+	})
+</script>
+<div id="wrapper">
+<div class="outer">
+
+<script src="../../../bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" type="ce3223cfd3be63521909afcd-text/javascript"></script>
+<div id="filler" class="fix gry-bg">
+<div id="innerfill" class="section">
+<div class="container-fluid">
+<div class="row mr0">
+<div class="col-sm-9 left-blog">
+<div id="mainColumn">
+<div id="post-4831" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Jun 8, 2020</span>
+<span class="categ-link"> <a href="asp-net-development-company/index.htm" rel="category tag">ASP.NET Development Company</a>, <a href="../java-development/java-development-company/index.htm" rel="category tag">Java development company</a> </span>
+<span class="comments"><a href="../../dotnet-vs-java-a-detailed-comparison/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../dotnet-vs-java-a-detailed-comparison/index.htm" title=".NET vs Java — A Detailed Comparison">.NET vs Java — A Detailed Comparison</a></h2>
+<div class="bz_post_thumb"><img width="900" height="600" src="../../wp-content/uploads/2020/06/feature2-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="../../wp-content/uploads/2020/06/feature2-1.jpg 900w, ../../wp-content/uploads/2020/06/feature2-1-300x200.jpg 300w, ../../wp-content/uploads/2020/06/feature2-1-768x512.jpg 768w" sizes="(max-width: 900px) 100vw, 900px"></div> <div class="entry">
+<p>Java and Microsoft .NET are two popular software development technologies for creating feature-packed web apps. The growing popularity of these two programming languages insists most of the businesses choose from either of these as a primary development tool for creating intuitive and scalable web applications. Both these web development technologies enable the creation of large-scale enterprise-grade business applications. Also, these have evolved over the period of times to enhance and support desktop &amp; server-side application development. Between these two programming languages, you must first understand the applications created using either of the web app development technologies. Through this Java vs .Net comparison blog, we aim at highlighting the difference between .NET and Java. Our objective is to help businesses&#8211; small or big&#8211; understand how either of the programming language environments can fit in their operational requirements. A Microsoft .NET technology-based software solution might be the right choice for an Enterprise-grade web app which needs a high level of data integrity and stringent security. On the other hand, a Java-based software solution would be the best fit when the primary need is cross-platform based operability in-line with its motive “write once, deploy anywhere.” Nowadays, almost all software development company work on these major technologies. So, without further ado, let’s compare java vs .net. 1. Java vs .NET– Differences At a Glance 2. .NET Vs Java Market Share In the year 2018, Indeed.com recruitment platform analyzed publications in the Software Development category to find out which programming languages are most in vogue.</p> </div>
+</div>
+<div id="post-2509" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Jul 20, 2018</span>
+<span class="categ-link"> <a href="index.htm" rel="category tag">ASP.NET Development</a> </span>
+<span class="comments"><a href="../../how-to-secure-net-application-development/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../how-to-secure-net-application-development/index.htm" title="How to Secure .NET Application Development?">How to Secure .NET Application Development?</a></h2>
+<div class="entry">
+<p>Nowadays all of the businesses and web applications are highly powered by the internet. With this increased use of internet, various security threats often arise on the horizon which need to be dealt with firmly if you want your business or application to run without any interruption. We have seen the number of attacks on various web applications have increased rapidly since the last decade or so. Therefore the web application developer should remain updated with the latest and best processes and practices to secure their web applications. As .NET is one of the most popular platform for web application development hence we will explain about some of the security measures which help in securing a .NET application.You can try these ways to maintain the security standard throughout the development process and during its usage online. Thoroughly Checking and Sanitizing the URL A .NET developer who is doing .NET Application Development can apply many techniques to enable the security prevention inside a web application. The most important thing is to prevent any bad, unwanted or malicious data to enter into your website. Most of the security attacks and security breaches happen when the query string values pass through the URL. The best security practice is to define a commonplace to whitelist the URL. Therefore cleaning the URL with a set of whitelisted characters and removing the bad ones is a better way to secure the application as it discourages other characters apart from the whitelisted ones. Encoding or Encrypting the</p> </div>
+</div>
+<div id="post-2205" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Feb 28, 2018</span>
+<span class="categ-link"> <a href="index.htm" rel="category tag">ASP.NET Development</a> </span>
+<span class="comments"><a href="../../ultimate-guide-to-the-uses-and-benefits-of-net-development/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../ultimate-guide-to-the-uses-and-benefits-of-net-development/index.htm" title="Ultimate Guide to the Uses and Benefits of .NET development">Ultimate Guide to the Uses and Benefits of .NET development</a></h2>
+<div class="bz_post_thumb"><img width="1200" height="624" src="../../wp-content/uploads/2018/02/An-Introduction-to-.NET_.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="../../wp-content/uploads/2018/02/An-Introduction-to-.NET_.png 1200w, ../../wp-content/uploads/2018/02/An-Introduction-to-.NET_-300x156.png 300w, ../../wp-content/uploads/2018/02/An-Introduction-to-.NET_-768x399.png 768w, ../../wp-content/uploads/2018/02/An-Introduction-to-.NET_-1024x532.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px"></div> <div class="entry">
+<p>If you have been searching for a reliable and most trusted platform for website or app or even desktop app development, then you have landed at a completely befitting post. In this write up, you will find everything you need to know about ASP.NET development for getting your business app or website created. What is ASP.NET framework- Ins and Outs of .NET development! .NET launched in 2002 by Microsoft a giant industry leader, is a dynamic platform which offers reliability and security level to the clients whose website is to created using ASP.NET framework. .NET is a completely free and open-source development platform. It is an ultimate cross-platform web development technology which allows its users to take advantage of multiple languages, editors as well as libraries which are helpful in building mobile, web, desktop as well as gaming apps and websites. Languages VB (Visual Basic), C# and F# are the three main programming basics which are employed in .NET framework for the development of websites as well as apps. First programming language which is a top-notch modern and simple OOP based as well as type-safe language is C#. This is used in the ASP.NET web and app development. Second on the list is F#- an open-source and OOP language, which is functional and cross-platform at the same time is used in this framework. Visual Studio is one of the most needed VB essential for .NET website development. It is an easy and approachable language. OOP, type-safe and functional. Attractive websites</p> </div>
+</div>
+<div id="post-2049" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 15, 2017</span>
+<span class="categ-link"> <a href="index.htm" rel="category tag">ASP.NET Development</a> </span>
+<span class="comments"><a href="../../what-are-the-various-aspects-of-mobile-asp-net-development/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../what-are-the-various-aspects-of-mobile-asp-net-development/index.htm" title="What are the various aspects of Mobile ASP.NET Development?">What are the various aspects of Mobile ASP.NET Development?</a></h2>
+<div class="entry">
+<p>In today’s highly competitive world, creating a website for any business has been an integral part of its strategy to expand worldwide. The website acts as an online identity for the business and helps it to expand beyond boundaries. A Website helps a business to gain more customers from around the world. A Website helps the business to receive quick and accurate feedback about their product and services which the business if offering in the market. This way the business can improve the quality of its existing products and services by carefully analyzing the customer&#8217;s feedback. If you want to develop your website then you have many options of platforms like ASP.NET, PHP, J2EE etc. &nbsp; To create your business website, you can go for .NET MVC development as it is one of the best processes to develop quality websites and it offers so many benefits to the developers as well as to the website visitors. &nbsp; Also in the modern world, usage of smartphones has reached to an all time high. This generation is no doubt a smart one and using smart phones to do so many of their daily tasks. Right now more than 6 out of 10 people in the world is using smartphones. The people who are using normal mobile phones are also slowly moving towards using smartphones. &nbsp; Due to these reasons, the demand for the mobile website has increased in recent years. Mobile websites are customized to fit the screen size of a phone.</p> </div>
+</div>
+<div id="post-1875" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Mar 14, 2013</span>
+<span class="categ-link"> <a href="index.htm" rel="category tag">ASP.NET Development</a> </span>
+<span class="comments"><a href="../../choose-xicom-for-offshore-microsoft-dot-net-development/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../choose-xicom-for-offshore-microsoft-dot-net-development/index.htm" title="Why Choose Xicom Offshore Experts Team for Microsoft .Net Development">Why Choose Xicom Offshore Experts Team for Microsoft .Net Development</a></h2>
+<div class="entry">
+<p>As the sector of information technology is advancing to new levels, software development is taking a new fold. Amongst the different development languages taken into use, dot net has become one of the finest languages favored by majority of developers across the globe. For development of business, it is important to make use of software, which can help a company in enhancing its functioning in a multi-faceted manner. With advancement of technology, an array of software solutions is available in the marketplace which aid businesses in augmenting their growth in leaps and bounds. As the demand of software development outsourcing witnesses an upheaval, innumerable offshore companies are setting a foot hold in the IT arena. But as they say, there can only be one ace and Xicom Technologies Ltd. duly suffices this saying.  Xicom has emerged as a global market leader, rendering qualitative services in the arena software development and Outsource .NET Development for over a decade. Over the years, Xicom has evolved with the changing technological trends and made itself adept with the expertise of developing customized software that suffices the needs and requisitions of companies as well as individual vendors. Companies from across the globe are outsourcing their software development projects to Xicom in order to attain numerous fruitful services and benefits. &nbsp; Why Xicom Surpasses Other Providers? Global clientele has continually favored the software development services and solutions rendered by Xicom for several reasons, which are mentioned below: Cost-Effective: The software development services rendered by Xicom are</p> </div>
+</div>
+<div id="post-1779" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Dec 13, 2012</span>
+<span class="categ-link"> <a href="index.htm" rel="category tag">ASP.NET Development</a> </span>
+<span class="comments"><a href="../../is-apple-really-banking-microsoft-office-suite/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../is-apple-really-banking-microsoft-office-suite/index.htm" title="Is Apple Really Banking on Microsoft Office Suite?">Is Apple Really Banking on Microsoft Office Suite?</a></h2>
+<div class="entry">
+<p>The rumor mills are on full churn and this time the gossip surrounds the renowned web development company, Microsoft. Though there hasn’t been any official announcement from Microsoft’s side, but gossip mongers are saying it out loud- Microsoft is developing an Office Suite for Apple’s iPhones and iPads. And this time there is an evidence of to support this rumor. Mac4Ever, a French website dedicated to IT, has got its hand on a bunch of references that speak of Microsoft and ASP.Net based applications that have been designed keeping in mind the specifications of iOS, the operating system for Apple’s iPhone and iPad devices. In their first look, these documents appeared to incorporate a comprehensive list of product support documents. This, however, sounds strange as Microsoft has not even mentioned once about any plans of launching Office apps for mobile platforms other than its own. So, a support document for a product called ‘Excel for iPad definitely calls for some serious sniffing and nose poking. This can, however, either be perceived as a strange and uncalled for mistake on part of one of Microsoft’s employees or the day is nearing when Microsoft will take everyone by surprise and launch its Office applications for non-Microsoft mobile devices. Numerous versions of Microsoft Office apps are already available for use on Mac and Apple platforms but Microsoft has majorly favored Windows as a primary platform for running the Office Suite. This could be great news for the Apple users, but sadly they have</p> </div>
+</div>
+<div id="post-1773" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Dec 4, 2012</span>
+<span class="categ-link"> <a href="index.htm" rel="category tag">ASP.NET Development</a> </span>
+<span class="comments"><a href="../../microsoft-contrives-the-future-for-enterprise-asp-net-development/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../microsoft-contrives-the-future-for-enterprise-asp-net-development/index.htm" title="Microsoft Contrives the Future for Enterprise ASP.Net Development">Microsoft Contrives the Future for Enterprise ASP.Net Development</a></h2>
+<div class="entry">
+<p>As Windows 8 surfaces in the virtual arena with a bang, Microsoft has fasten it’s seat belts and is all set to improvise it’s array of development tools, in order to facilitate the developers to harness the best capabilities of the new OS. A range of new products including .Net 4.5 and Visual Studio 2012 are being shipped, but there are still numerous enhancements required, as far as enterprise ASP.Net development is concerned. Towards the closing of October, Microsoft finally unveiled its roadmap towards the development and incorporation of new features and functionaries in ASP.Net and Web Tool 2012.2. The to-be-introduced features are sure to set the expectations of the developer fraternity soaring, however Microsoft presses that these additions are just in the planning stage. Possibilities are high that some of them might never see the daylight. The most considerable addition to be embraced by the .Net framework is SignalR. SignalR will use WebSockets and other low-level transports to add real time functionaries to web based applications. The first version of SignalR will enable developers to add hubs and item templates to ASP.Net applications. It will be capable of integrating with both ASP.Net Web API and ASP.Net MVC. Speaking of Web API, Microsoft plans to make the support system of Windows Apps Stores more robust, add enhanced OData functionality and enable simple monitoring and tracing. MVC will also experience a facelift. The new additions to MVC will assist the developers in building applications mapping from Single Page Applications, Facebook Integration,</p> </div>
+</div>
+<div id="post-1680" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">May 16, 2012</span>
+<span class="categ-link"> <a href="index.htm" rel="category tag">ASP.NET Development</a> </span>
+<span class="comments"><a href="../../explaining-the-mvc-architecture/index.htm#respond">0</a></span>
+</p>
+</div>
+<h2><a href="../../explaining-the-mvc-architecture/index.htm" title="Explaining The MVC Architecture">Explaining The MVC Architecture</a></h2>
+<div class="entry">
+<p>The software development is becoming more and more complex with the passage of time. With increasing number of developers working on a single large project, it is required that the solution is split into various modules so that it easier to manage the project as a whole. The MVC architecture is one of the most effective techniques to do so. A web development company could create highly scalable and reliable business solutions for its clients by using this model for developing web solutions. MVC stands for Model View Controller and the meaning &amp; significance of each of its word is explained below. Model Objects that are present in the RAM memory collectively form the Model. This data has been retrieved from the database and brought into the RAM memory for further processing. View The way data is presented on the screen is known as view. For static web pages the view comprises of objects stored on the server whereas for RIA (Rich Internet Application) it can reside on the machine at client’s end through various native data structures or JavaScript objects. Controller The controller refers to the requests and manages the responses for the application. The MVC pattern allows developers to separately conduct the development of business logic and the GUI of the software. Thus, both designers and developers can work simultaneously on the project without disturbing the part concerned with the other one. An experienced .Net MVC development company can effectively use it for developing robust solutions that provide</p> </div>
+</div>
+<div id="paginateIndex" class="fix">
+<p><span class="left"></span> <span class="right"></span></p>
+</div>
+</div>
+</div>
+<div class="col-sm-3 right-blog">
+<div class="secondaryColumn">
+<div id="text-10" class="widgetContainer widget_text"> <div class="textwidget"><div class="contact-bar">
+<h3>Looking for<br> Certified & <br>Experienced <br><span class="red-text">Developers</span></h3>
+<ul>
+<li>300+ Experts</li>
+<li>Flexible Engagement</li>
+<li>NDA Protection</li>
+<li>100% Satisfaction</li>
+<li>24X7 Support</li>
+<li>Moneyback Guarantee</li>
+</ul>
+<div class="contact-bttn">
+<a href="../../../contact/index.htm">Contact Now!</a>
+</div>
+</div></div>
+</div><div id="text-3" class="widgetContainer widget_text"><h3 class="widgetTitle">Xicom Technologies Ltd.</h3> <div class="textwidget">Founded in the year 2002, Xicom is a ISO 9001 certified software development company with a strong team of 300+ highly skilled IT experts, catering result-oriented and cost-competitive solutions to SME's across the world.</div>
+</div> <div id="recent-posts-3" class="widgetContainer widget_recent_entries"> <h3 class="widgetTitle">Recent Posts</h3> <ul>
+<li>
+<a href="../../why-php-is-still-good-for-web-development/index.htm">What Makes PHP a Still Good Choice For Web Development?</a>
+</li>
+<li>
+<a href="../../build-a-web-app/index.htm">Estimating the Web App Development Cost: How To Set the Budget Rightly?</a>
+</li>
+<li>
+<a href="../../businesses-should-invest-in-enterprise-applications/index.htm">Why Do Businesses Should Invest In Enterprise Application?</a>
+</li>
+<li>
+<a href="../../build-a-enterprise-mobile-application/index.htm">Build A Successful Enterprise Application For Your Business</a>
+</li>
+<li>
+<a href="../../understanding-the-app-budget-by-app-type/index.htm">Mobile App Development Cost: Understanding The App Budget By App Type in 2022</a>
+</li>
+<li>
+<a href="../../cost-to-create-a-game-app/index.htm">How Much Does It Cost To Develop a Gaming App?</a>
+</li>
+<li>
+<a href="../../build-a-food-delivery-app-like-ubereats/index.htm">How to build a food delivery app like Ubereats and Deliveroo</a>
+</li>
+<li>
+<a href="../../make-a-successful-messaging-app/index.htm">How To Make A Successful Messaging App In 2021?</a>
+</li>
+<li>
+<a href="../../cost-to-make-a-fitness-app/index.htm">How Much Does It Cost to Make a Fitness App</a>
+</li>
+<li>
+<a href="../../find-the-right-development-partner-in-san-francisco-usa/index.htm">How to find the right development partner in San Francisco, USA</a>
+</li>
+</ul>
+</div><div id="categories-3" class="widgetContainer widget_categories"><h3 class="widgetTitle">Blog Categories</h3> <ul>
+<li class="cat-item cat-item-198"><a href="../android-app-development/index.htm">Android App Development</a>
+</li>
+<li class="cat-item cat-item-80 current-cat"><a href="index.htm">ASP.NET Development</a>
+</li>
+<li class="cat-item cat-item-384"><a href="asp-net-development-company/index.htm">ASP.NET Development Company</a>
+</li>
+<li class="cat-item cat-item-334"><a href="../big-data-analytics/index.htm">Big Data Analytics</a>
+</li>
+<li class="cat-item cat-item-290"><a href="../blockchain-development/index.htm">Blockchain Development</a>
+</li>
+<li class="cat-item cat-item-309"><a href="../cloud-computing/index.htm">Cloud Computing</a>
+</li>
+<li class="cat-item cat-item-127"><a href="../cms-development/index.htm">CMS Development</a>
+</li>
+<li class="cat-item cat-item-231"><a href="../cross-platform-app-development/index.htm">Cross Platform App Development</a>
+</li>
+<li class="cat-item cat-item-213"><a href="../ecommerce-development/index.htm">Ecommerce Development</a>
+</li>
+<li class="cat-item cat-item-388"><a href="../hire-app-developers/index.htm">hire app developers</a>
+</li>
+<li class="cat-item cat-item-382"><a href="../hire-magento-developer/index.htm">Hire Magento Developer</a>
+</li>
+<li class="cat-item cat-item-376"><a href="../hire-mobile-app-developer/index.htm">Hire Mobile App Developer</a>
+</li>
+<li class="cat-item cat-item-375"><a href="../hire-software-developer/index.htm">Hire software developer</a>
+</li>
+<li class="cat-item cat-item-294"><a href="../iot-development/index.htm">Internet of Things (IoT)</a>
+</li>
+<li class="cat-item cat-item-54"><a href="../ios-app-development/index.htm">iOS App Development</a>
+</li>
+<li class="cat-item cat-item-148"><a href="../java-development/index.htm">Java Development</a>
+</li>
+<li class="cat-item cat-item-383"><a href="../java-development/java-development-company/index.htm">Java development company</a>
+</li>
+<li class="cat-item cat-item-170"><a href="../magento-development/index.htm">Magento Development</a>
+</li>
+<li class="cat-item cat-item-53"><a href="../mobile-app-development/index.htm">Mobile App Development</a>
+</li>
+<li class="cat-item cat-item-391"><a href="../mobile-app-development-companies-in-india/index.htm">Mobile App Development Companies in India</a>
+</li>
+<li class="cat-item cat-item-377"><a href="../mobile-app-development/mobile-app-development-company/index.htm">Mobile app development company</a>
+</li>
+<li class="cat-item cat-item-389"><a href="../mobile-app-development-company-2/index.htm">mobile app development company</a>
+</li>
+<li class="cat-item cat-item-392"><a href="../mobile-app-development-company-india/index.htm">Mobile App Development Company India</a>
+</li>
+<li class="cat-item cat-item-387"><a href="../outsourcing-software-development-company/index.htm">outsourcing software development company</a>
+</li>
+<li class="cat-item cat-item-49"><a href="../php-development/index.htm">PHP Development</a>
+</li>
+<li class="cat-item cat-item-4"><a href="../software-development/index.htm">Software Development</a>
+</li>
+<li class="cat-item cat-item-426"><a href="../software-development-company-in-india/index.htm">software development company in india</a>
+</li>
+<li class="cat-item cat-item-3"><a href="../web-development/index.htm">Web Development</a>
+</li>
+<li class="cat-item cat-item-390"><a href="../web-development/web-development-company/index.htm">web development company</a>
+</li>
+<li class="cat-item cat-item-14"><a href="../xicom-technologies/index.htm">Xicom Technologies / Reviews</a>
+</li>
+</ul>
+</div>
+</div> <div class="side-logos">
+<div class="half-logo clutch">
+<a href="https://clutch.co/profile/xicom-technologies">
+<img src="../../wp-content/themes/grid_focus/gridfocus/images/Mobile_App_Developers_2019.png" alt="Clutch">
+</a>
+</div>
+<div class="half-logo good_firms"><a target="_blank" href="https://www.goodfirms.co/companies/view/3935/xicom-technologies"><img style="width:240px" src="../../../badges/blue-button/app-development.svg" alt="GoodFirms Badge"></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<footer class="footer">
+<div class="inner-footer">
+<div class="container-fluid">
+<div class="accordion row col-sm-12" id="accordionExample">
+<div class="menu-listing col contact-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+Offices</button>
+<span class="footer-head hide-xs"><a href="../../../contact/index.htm">Offices</a></span>
+<div id="collapseOne" class="collapse vd show" aria-labelledby="headingOne" data-parent="#accordionExample">
+<p>
+18 Bartol Street #1155 <br>
+San Francisco, California 94133 <br>
+United States. <br>
+Phone +1.408.878.3255<br>
+</p>
+<p>
+<a class="address-map" href="https://goo.gl/maps/TQTzgzV8FP22" target="_blank">
+301-10 Opal Tower, Business Bay <br>
+Dubai, United Arab Emirates.</a><br>
+Phone +971.529144795<br>
+</p>
+<p>
+<a class="address-map" href="https://goo.gl/maps/TQTzgzV8FP22" target="_blank">
+C-1/134, Janak Puri, New Delhi<br>
+110058 India.</a><br>
+Phone +91.11.25502616<br>
+</p>
+</div>
+</div>
+<div class="menu-listing col service-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+Services</button>
+<span class="footer-head hide-xs"><a href="../../../services/index.htm">Services</a></span>
+<div id="collapseTwo" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../services/web-development/index.htm">Web Development</a></li>
+<li><a href="../../../services/mobile-app-development/index.htm">Mobile App Development</a></li>
+<li><a href="../../../services/software-development/index.htm">Software Development</a></li>
+<li><a href="../../../services/consulting/index.htm">IT Consulting </a></li>
+</ul>
+</div>
+</div>
+<div class="menu-listing col solution-col">
+<div class="inner-nav">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+Latest Thinking</button>
+<span class="footer-head hide-xs"><a href="../../../latest-thinking/index.htm">Latest Thinking</a></span>
+<div id="collapseThree" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../latest-thinking/big-data-analytics/index.htm">Big Data & Analytics</a></li>
+<li><a href="../../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</div>
+<div class="inner-nav mb0">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+Solutions</button>
+<span class="footer-head hide-xs"><a href="../../../solutions/index.htm">Solutions</a></span>
+<div id="collapseSix" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../solutions/technologies/index.htm">Technologies</a></li>
+<li><a href="../../../solutions/hire-developers/index.htm">Hire Developers</a></li>
+<li><a href="../../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="menu-listing col company-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+Corporate
+</button>
+<span class="footer-head hide-xs"><a href="../../../corporate/index.htm">Corporate</a></span>
+<div id="collapseFour" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../industries/index.htm">Industries </a></li>
+<li><a href="../../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../../contact/index.htm">Contact Us</a></li>
+<li><a href="../../../careers/index.htm">Careers</a></li>
+<li><a href="../../index.htm">Blog</a></li>
+<li><a href="../../../terms/index.htm">Terms of Use</a></li>
+<li><a href="../../../privacy/index.htm">Privacy Policy</a></li>
+<li><a href="../../../sitemap/index.htm">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="menu-listing col hvQues">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+Have Questions?
+</button>
+<span class="footer-head hide-xs">Have Questions?</span>
+<div class="phone-contact">Get in touch with us <a href="tel:+1.408.878.3255"><span class="number">+1.408.878.3255</span></a></div>
+<div id="collapseFive" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<div class="rowfull">
+Skype: <a href="skype:xicom.sales">xicom.sales</a><br>
+Email: <a href="../../../cdn-cgi/l/email-protection.html#fb889a979e88bb8392989496d5999281"><span class="__cf_email__" data-cfemail="344755585147744c5d575b591a565d4e">[email&#160;protected]</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-footer">
+<div class="container-fluid">
+<div class="row copyright">
+<div class="col-sm-7 copy">
+<p> Copyright 2002-2023 Xicom Technologies Ltd. </p>
+<div class="rateit-wrap">
+<div class="overall social-foot">
+<div class="content" itemscope="" itemtype="http://schema.org/Product">
+<meta itemprop="description" content="Xicom is a ISO 9001 certified software development company providing custom, offshore software, mobile app and web application development services in Dubai, UAE.">
+<input type="hidden" name="post_id" id="rating_post_id">
+<input type="hidden" name="currentrate" id="currentrate" value="5835">
+<span> Rated <span id="ratingValue">4.8 </span>
+out of 5.0
+<meta itemprop="name" content="Software, Web, Mobile App Development Company">
+<link itemprop="image" href="https://www.xicom.ae/"> by </span>
+<span class="client-project" style="display: inline-block;">
+<div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope="">
+<meta itemprop="reviewCount" content="5835">
+<meta itemprop="ratingValue" content="4.8">
+</div>
+<div itemprop="review" itemtype="http://schema.org/Review" itemscope="">
+<div itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+<meta itemprop="name" content="Xicom">
+</div>
+<div itemprop="reviewRating" itemtype="http://schema.org/Rating" itemscope="">
+<meta itemprop="ratingValue" content="5">
+<meta itemprop="bestRating" content="5">
+</div>
+</div> <span id="totalClient"> 5835</span>+ Xicom clients on over 8350+ projects</span>
+<div itemprop="brand" itemtype="http://schema.org/Thing" itemscope="">
+<meta itemprop="name" content="Xicom">
+</div>
+</div>
+<input type="hidden" name="rating_page_url" value="mobile-app-development.php" id="rating_page_url">
+</div>
+</div>
+</div>
+<div class="col-sm-3 footer-logos">
+<a href="https://clutch.co/profile/xicom-technologies" class="f-logo cluth" target="_blank"> </a>
+<a href="https://www.goodfirms.co/companies/view/3935/xicom-technologies" class="f-logo good-firm" target="_blank"> </a>
+</div>
+<div class="col-sm-2 social-icons">
+<a href="https://www.facebook.com/xicomtechnologies" class="fb-icon" target="_blank"></a>
+<a href="https://www.twitter.com/xicomtech" class="tw-icon" target="_blank"></a>
+<a href="https://www.linkedin.com/company/xicom-technologies-ltd/" class="lnkd-icon" target="_blank"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="live-chat" id="status">
+<a href="#" class="blue-btn"> Live Chat </a>
+</div>
+
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="ce3223cfd3be63521909afcd-text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/573d53a6a8b2e6115f951546/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+<script type="ce3223cfd3be63521909afcd-text/javascript">
+Tawk_API = Tawk_API || {};
+Tawk_API.onStatusChange = function (status){
+
+if(status === 'online')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+else if(status === 'away')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+else if(status === 'offline')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+};
+Tawk_API.onOfflineSubmit = function(data){ 
+window.location= document.location.origin + "/contact/thanks.html"; 
+};
+Tawk_API.onChatStarted = function(){
+};
+</script>
+
+</footer>
+<script type="ce3223cfd3be63521909afcd-text/javascript" src="../../wp-includes/js/wp-embed.min.js?ver=5.1.16"></script>
+<script src="../../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="ce3223cfd3be63521909afcd-|49" defer=""></script></body>
+</html>

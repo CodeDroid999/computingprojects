@@ -1,0 +1,913 @@
+﻿<!DOCTYPE html>
+<html>
+<head profile="https://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Web Development | Xicom - Part 17</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="WordPress 5.1.16">
+<link rel="shortcut icon" href="../../../../wp-content/themes/grid_focus/gridfocus/images/favicon/favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="Xicom Blog | Software, Mobile App, Web Application Development RSS Feed" href="../../../../feed/index.htm">
+
+<link rel="stylesheet" href="../../../../../bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="../../../../../css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<link href="../../../../../css-1?family=Lato:300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.xicom.biz/blog/wp-content/themes/grid_focus/gridfocus/css/fonts/font-awesome-4/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="../../../../wp-content/themes/grid_focus/gridfocus/css/fonts/stylesheet.css">
+<link type="text/css" rel="stylesheet" href="../../../../wp-content/themes/grid_focus/gridfocus/css/reset.css">
+<link rel="stylesheet" href="../../../../wp-content/themes/grid_focus/gridfocus/style.css" type="text/css" media="screen">
+<link type="text/css" rel="stylesheet" href="../../../../wp-content/themes/grid_focus/gridfocus/css/responsive.css">
+<script src="../../../../../ajax/libs/jquery/1.10.2/jquery.min.js" type="9bf0d0ed79f3c21c30eda77d-text/javascript"></script>
+<script src="../../../../wp-content/themes/grid_focus/gridfocus/js/owl.carousel.js" type="9bf0d0ed79f3c21c30eda77d-text/javascript"></script>
+<script src="../../../../wp-content/themes/grid_focus/gridfocus/js/custom.js" type="9bf0d0ed79f3c21c30eda77d-text/javascript"></script>
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Xicom Blog | Software, Mobile App, Web Application Development &raquo; Web Development Category Feed" href="../../feed/index.htm">
+<script type="9bf0d0ed79f3c21c30eda77d-text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.xicom.biz\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.16"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55358,56760,9792,65039],[55358,56760,8203,9792,65039])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../../../wp-includes/css/dist/block-library/style.min.css?ver=5.1.16" type="text/css" media="all">
+<script type="9bf0d0ed79f3c21c30eda77d-text/javascript" src="../../../../wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="9bf0d0ed79f3c21c30eda77d-text/javascript" src="../../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<link rel="https://api.w.org/" href="../../../../wp-json/index.htm">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.xicom.biz/blog/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.1.16">
+
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="index.htm">
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.xicom.biz/blog/using-feature-driven-development-fdd-for-web-development/">
+<meta property="og:title" content="Using Feature Driven Development (FDD) for Web Development">
+<meta property="og:description" content="One of the Agile software development methodologies, FDD or the Feature Driven Development stresses in creating shorter iterations of functionality, with each functionality catering to certain features in the website. In FDD the software designing and modeling is given due importance, apart from tra">
+<meta property="og:site_name" content="Xicom Blog | Software, Mobile App, Web Application Development">
+<meta property="og:image" content="">
+<meta property="og:image:alt" content="">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+<meta itemscope="" itemtype="article">
+<meta itemprop="description" content="One of the Agile software development methodologies, FDD or the Feature Driven Development stresses in creating shorter iterations of functionality, with each functionality catering to certain features in the website. In FDD the software designing and modeling is given due importance, apart from tra">
+<meta itemprop="image" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.xicom.biz/blog/using-feature-driven-development-fdd-for-web-development/">
+<meta name="twitter:title" content="Using Feature Driven Development (FDD) for Web Development">
+<meta name="twitter:description" content="One of the Agile software development methodologies, FDD or the Feature Driven Development stresses in creating shorter iterations of functionality, with each functionality catering to certain features in the website. In FDD the software designing and modeling is given due importance, apart from tra">
+<meta name="twitter:image" content="">
+<style type="text/css" id="wp-custom-css">
+			.table-image.table {
+    border-left: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    margin: 20px auto;
+}
+
+.table-image.table th, .table-image.table td {
+    padding: 5px 15px;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #758495;
+    border-right: 1px solid #dee2e6;
+}
+
+.table-image.table th {
+    background: #022a5e;
+    color: #fff;
+}
+
+@media screen and (max-width:567px){
+	.table-image.table tr th, .table-image.table tr td {font-size: 13px;}
+/*	.table-image.table tr th, .table-image.table tr td { flex: 0 0 100%; height: 50%; font-size: 13px; padding: 5px 10px; width: 150px; display: flex; align-items: center; justify-content: center;}
+
+.table-image.table tbody tr { display: flex; flex-wrap: wrap; height: 100%;}
+
+.table-image.table tbody, .table-image.table thead { display: flex;}
+.table-image.table { display:flex; overflow:auto;}
+.table-image.table thead {    position: sticky; left: 0;}
+	.table-image.table tr th {border-bottom: 1px solid #909ba8; border-top:0;}*/
+}
+		</style>
+
+<script async="" src="../../../../../gtag/js-1?id=UA-25100098-3" type="9bf0d0ed79f3c21c30eda77d-text/javascript"></script>
+<script type="9bf0d0ed79f3c21c30eda77d-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+//   gtag('config', 'UA-25100098-3');
+  gtag('config', 'UA-25100098-1', { 'optimize_id': 'GTM-KCG4WZC'});
+</script>
+</head>
+<body>
+<script type="9bf0d0ed79f3c21c30eda77d-application/javascript">
+	<!--
+	function popitup(url) {
+		newwindow=window.open(url,'name','height=465,width=460,scrollbars=yes,menubar=no,toolbar=no,resizable=false,location=no');
+
+		if (window.focus) {newwindow.focus()}
+		return false;
+	}
+	// -->
+</script>
+
+<script type="9bf0d0ed79f3c21c30eda77d-text/javascript" language="Javascript" src="../../../../../js/validation.js"></script>
+<script type="9bf0d0ed79f3c21c30eda77d-text/javascript">
+//declare function
+function validateContact()
+{
+	var error = false;	
+	if (isEmpty('form2', 'contactPerson1'))
+	{
+		$("#contactPerson1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#contactPerson1").removeClass('error');
+		//error = false;
+	}
+	if (isEmpty('form2', 'email1'))
+	{
+		$("#email1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#email1").removeClass('error');
+		//error = false;
+	}
+	if (isEmpty('form2', 'phone1'))
+	{
+		$("#phone1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#phone1").removeClass('error');
+		//error = false;
+	}
+	
+	
+	if (isEmpty('form2', 'description1'))
+	{
+		$("#description1").addClass('error');
+		error = true;
+	}	
+	else
+	{
+		$("#description1").removeClass('error');
+		//error = false;
+	}	
+
+	if (error)
+	{		
+		return false;
+	}
+	else
+	{
+		$("#form2").submit();
+	}
+}
+</script>
+
+<div class="container-fluid header-wht">
+<header class="logo-navbar">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+<div class="header-container">
+<div class="inner-overlay"> </div>
+<div class="row header-row">
+<div class="navbar-header col-sm-2">
+<a class="navbar-toggle">
+<div class="sr-only"><div class="header-heading">Software, Mobile App, Web Application Development Company, Services India, USA</div></div>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a href="../../../../../index.htm" class="logo"></a>
+</div>
+<div class="col-sm-10 right-menu">
+<nav id="slidemenu">
+<div class="inner-menu">
+<div class="navbar-toggle cross">
+<span class="first"></span>
+<span class="second"></span>
+</div>
+<ul id="navigation" class="nav navbar-nav">
+<li class="nav-item"> <a href="../../../../../services/index.htm">Services</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li> <a href="../../../../../services/web-development/index.htm"> Web Development </a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../../../../services/ecommerce-development/index.htm"> Ecommerce Development </a></li>
+<li> <a href="../../../../../services/content-management-system/index.htm"> Content Management System (CMS) </a></li>
+</ul>
+</li>
+<li> <a href="../../../../../services/mobile-app-development/index.htm"> Mobile App Development </a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../../../../services/android-app-development/index.htm"> Android App Development </a></li>
+<li> <a href="../../../../../services/ios-app-development/index.htm"> iOS App Development </a></li>
+
+<li> <a href="../../../../../services/react-native-app-development/index.htm"> React Native App Development </a></li>
+<li> <a href="../../../../../services/flutter-app-development/index.htm"> Flutter App Development </a></li>
+<li> <a href="../../../../../services/augmented-reality/index.htm"> Augmented Reality / VR </a></li>
+</ul>
+</li>
+<li> <a href="../../../../../services/software-development/index.htm"> Software Development </a> </li>
+<li> <a href="../../../../../services/consulting/index.htm"> IT Consulting Services</a></li>
+<li> <a href="../../../../../services/quality-assurance-testing/index.htm"> Quality Assurance &amp; Testing </a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../../../../latest-thinking/index.htm">Latest Thinking</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../../../latest-thinking/big-data-analytics/index.htm">Big Data &amp; Analytics</a></li>
+<li><a href="../../../../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../../../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../../../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../../../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"><a href="../../../../../industries/index.htm">Industries</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../../../industries/automotive/index.htm">Automotive</a></li>
+<li><a href="../../../../../industries/entertainment/index.htm"> Media and Entertainment </a></li>
+<li><a href="../../../../../industries/healthcare/index.htm"> Healthcare </a></li>
+<li><a href="../../../../../industries/manufacturing/index.htm"> Manufacturing </a></li>
+<li><a href="../../../../../industries/finance/index.htm"> Banking and Finance </a></li>
+<li><a href="../../../../../industries/real-estate/index.htm"> Real Estate </a></li>
+<li><a href="../../../../../industries/retail/index.htm"> Retail and Ecommerce </a></li>
+<li><a href="../../../../../industries/logistics/index.htm"> Logistics and Transportation </a></li>
+<li><a href="../../../../../industries/travel/index.htm"> Travel and Tourism </a></li>
+<li><a href="../../../../../industries/education/index.htm"> Education and E-Learning </a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../../../../solutions/index.htm">Solutions</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../../../solutions/technologies/index.htm"> Technologies </a>
+<ul class="sub-menu inner-sub">
+<li><a href="../../../../../offerings/mobile-app-development/index.htm" title="Mobile App Development"> Mobile App Development </a></li>
+<li><a href="../../../../../offerings/android-development/index.htm" title="Android App Development"> Android App Development </a></li>
+<li><a href="../../../../../offerings/iphone-development/index.htm" title="iOS App Development"> iOS App Development </a></li>
+
+<li> <a href="../../../../../services/react-native-app-development/index.htm"> React Native App Development </a></li>
+<li> <a href="../../../../../services/flutter-app-development/index.htm"> Flutter App Development </a></li>
+<li><a href="../../../../../offerings/java-development/index.htm" title="Java Development"> Java Development </a></li>
+<li><a href="../../../../../offerings/asp.net-development/index.htm" title="ASP.NET Development"> ASP.NET Development </a></li>
+<li><a href="../../../../../offerings/php-development/index.htm" title="PHP Development"> PHP Development </a></li>
+<li><a href="../../../../../offerings/magento-development/index.htm" title="Magento Development"> Magento Development </a></li>
+<li><a href="../../../../../offerings/ecommerce-development/index.htm" title="Ecommerce Development"> Ecommerce Development </a></li>
+<li><a href="../../../../../offerings/web-development/index.htm" title="Web Development"> Web Development </a></li>
+<li><a href="../../../../../offerings/software-development/index.htm" title="Software Development"> Software Development </a></li>
+</ul>
+</li>
+<li><a href="../../../../../solutions/hire-developers/index.htm">Hire Developers</a>
+<ul class="sub-menu inner-sub">
+<li> <a href="../../../../../offerings/hire-mobile-developers/index.htm" title="Hire Mobile App Developers">Hire Mobile App Developers</a></li>
+<li><a href="../../../../../offerings/hire-android-developers/index.htm" title="Hire Android App Developers">Hire Android App Developers</a></li>
+<li> <a href="../../../../../offerings/hire-iphone-developers/index.htm" title="Hire iPhone App Developers">Hire iOS App Developers</a></li>
+
+<li><a href="../../../../../offerings/hire-react-native-developers/index.htm" title="Hire React Native Developers">Hire React Native Developers</a></li>
+<li> <a href="../../../../../offerings/hire-flutter-developers/index.htm" title="Hire Flutter App Developers">Hire Flutter App Developers</a></li>
+<li> <a href="../../../../../offerings/hire-java-programmers/index.htm" title="Hire Java Developers">Hire Java Developers</a></li>
+<li><a href="../../../../../offerings/hire-asp.net-programmers/index.htm" title="Hire ASP.NET Developers">Hire ASP.NET Developers</a></li>
+<li> <a href="../../../../../offerings/hire-php-programmers/index.htm" title="Hire PHP Developers">Hire PHP Developers</a></li>
+<li> <a href="../../../../../offerings/hire-magento-developers/index.htm" title="Hire Magento Developers">Hire Magento Developers</a></li>
+<li> <a href="../../../../../offerings/hire-ecommerce-developers/index.htm" title="Hire Ecommerce Developers">Hire Ecommerce Developers</a></li>
+<li> <a href="../../../../../offerings/hire-web-developers/index.htm" title="Hire Web Developers">Hire Web Developers</a></li>
+<li> <a href="../../../../../offerings/hire-software-developers/index.htm" title="Hire Software Developers">Hire Software Developers</a></li>
+</ul>
+</li>
+<li><a href="../../../../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item"> <a href="../../../../../corporate/index.htm">Corporate</a>
+<div class="sub corporate">
+<ul class="sub-menu">
+<li><a href="../../../../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../../../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../../../../testimonials/index.htm">Testimonials</a></li>
+<li><a href="../../../../index.htm">Blog</a></li>
+<li><a href="../../../../../careers/index.htm">Careers</a></li>
+<li><a href="../../../../../contact/index.htm">Contact Us</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item contact-num"><a href="tel:+1.408.878.3255">+1.408.878.3255</a></li>
+</ul>
+</div>
+</nav>
+<div class="fr"><a href="../../../../../contact/index.htm" class="contact-number">Get Free Estimation</a></div>
+<div class="call-circle"><a class="calling" href="tel:+1.408.878.3255"> </a></div>
+<div class="nav-menu">
+<span> </span>
+<span class="right-ar"> </span>
+<span> </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="full-screen-menu section fadeIn">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-7 menu-content">
+<div class="menu-title">
+Inspire The <span class="blueTxt">Next.</span>
+</div>
+<a href="../../../../../contact/index.htm" class="red-btn"><div class="circle-dot wht-circle"> </div>Get Free Estimation</a>
+</div>
+<div class="col-sm-5 right-menu accordion" id="accordionExample1">
+<ul class="side-navigation">
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#serviceOne" aria-expanded="true" aria-controls="serviceOne">
+<span class="menu-link">Services</span>
+</div>
+<div id="serviceOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../../../services/index.htm">Overview</a></li>
+<li><a href="../../../../../services/web-development/index.htm">Web Development</a></li>
+<li><a href="../../../../../services/mobile-app-development/index.htm">Mobile App Development</a></li>
+<li><a href="../../../../../services/software-development/index.htm">Software Development</a></li>
+<li><a href="../../../../../services/consulting/index.htm">IT Consulting </a></li>
+<li> <a href="../../../../../services/quality-assurance-testing/index.htm"> Quality Assurance &amp; Testing </a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#latestThink" aria-expanded="true" aria-controls="latestThink">
+<span class="menu-link">Latest Thinking</span>
+</div>
+<div id="latestThink" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../../../latest-thinking/index.htm">Overview</a></li>
+<li><a href="../../../../../latest-thinking/big-data-analytics/index.htm">Big Data &amp; Analytics</a></li>
+<li><a href="../../../../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../../../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../../../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../../../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</li>
+<li><a href="../../../../../industries/index.htm">Industries</a></li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#solutionsSec" aria-expanded="true" aria-controls="solutionsSec">
+<span class="menu-link">Solutions</span>
+</div>
+<div id="solutionsSec" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../../../solutions/index.htm">Overview</a></li>
+<li><a href="../../../../../solutions/technologies/index.htm">Technologies</a></li>
+<li><a href="../../../../../solutions/hire-developers/index.htm">Hire Developers</a></li>
+<li><a href="../../../../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#corporateSec" aria-expanded="true" aria-controls="corporateSec">
+<span class="menu-link">Corporate</span>
+</div>
+<div id="corporateSec" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
+<ul class="inner-sub-menus">
+<li><a href="../../../../../corporate/index.htm">Explore Xicom</a></li>
+<li><a href="../../../../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../../../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../../../../testimonials/index.htm">Testimonials</a></li>
+<li><a href="../../../../../careers/index.htm">Careers</a></li>
+<li><a href="../../../../../contact/index.htm">Contact Us</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="office-sec">
+<div class="">
+<div class="row">
+<div class="col">
+<div class="title"> OFFICES </div>
+</div>
+<div class="col">
+<p> 18 Bartol Street #1155 <br>
+San Francisco, California 94133 <br>
+United States. <br>
+Phone +1.408.878.3255 </p>
+</div>
+<div class="col">
+<p> 303-10 Opal Tower, Business <br>
+Bay Dubai, United <br>
+Arab Emirates. <br>
+Phone +971.529144795 </p>
+</div>
+<div class="col main-head">
+<p> C-1/134, Janak Puri <br>
+New Delhi <br>
+110058 India. <br>
+Phone +91.11.25502616 </p>
+</div>
+<div class="col">
+<div class="social-icons">
+<a href="https://www.facebook.com/xicomtechnologies" class="fb-icon" target="_blank"></a>
+<a href="https://www.twitter.com/xicomtech" class="tw-icon" target="_blank"></a>
+<a href="https://www.linkedin.com/company/xicom-technologies-ltd/" class="lnkd-icon" target="_blank"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section inner-banners blog-banner newupdate">
+<div class="container-fluid">
+<div class="banner-heading">
+<span class="red-text">Insights</span> for Digital Transformation
+</div>
+</div>
+</div>
+<script type="9bf0d0ed79f3c21c30eda77d-text/javascript">
+	$(document).ready(function(){
+
+		$('link:last').after('<!--[if IE 9]><link href="https://www.xicom.biz/css/ie9.css" rel="stylesheet" type="text/css" /><![endif]-->');
+	})
+</script>
+<div id="wrapper">
+<div class="outer">
+
+<script src="../../../../../bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" type="9bf0d0ed79f3c21c30eda77d-text/javascript"></script>
+<div id="filler" class="fix gry-bg">
+<div id="innerfill" class="section">
+<div class="container-fluid">
+<div class="row mr0">
+<div class="col-sm-9 left-blog">
+<div id="mainColumn">
+<div id="post-152" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 28, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on Using Feature Driven Development (FDD) for Web Development</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../using-feature-driven-development-fdd-for-web-development/index.htm" title="Using Feature Driven Development (FDD) for Web Development">Using Feature Driven Development (FDD) for Web Development</a></h2>
+<div class="entry">
+<p>One of the Agile software development methodologies, FDD or the Feature Driven Development stresses in creating shorter iterations of functionality, with each functionality catering to certain features in the website. In FDD the software designing and modeling is given due importance, apart from tracking and report options as well, making it quite ideal for deployment in corporate websites. It gives more importance to the basic aspects of development, that when neglected, pose as great problems as the development process progresses. It is a comprehension of many organizational best practice methodologies used. It is possible to scale down and still utilize FDD in web development. With many complex and complicated development methodologies available now, FDD is quite unique from the others. That said, FDD proves to be quite helpful in the web development arena as well. So, few of the key facets of FDD in terms of Web development are mentioned below: Efficiency on bigger projects: FDD proves to be very efficient on bigger and complicated business projects. The more difficult the project the more effectual if FDD is applied. FDD helps in managing the web development projects in a simpler and better way. This does not mean that if the project has a small team, say 3 &#8211; then FDD is futile. It still holds good no matter the size. No technology constraints: FDD is capable of being used with any technology. There are no hard and fast rules that prohibit FDD from being used with any other technology. It</p> </div>
+</div>
+<div id="post-146" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 28, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on Customized Solutions for Web Design Development</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../customized-solutions-for-web-design-development/index.htm" title="Customized Solutions for Web Design Development">Customized Solutions for Web Design Development</a></h2>
+<div class="entry">
+<p>Xicom Technology is a professional web services company that offers customised solutions for individuals, businesses and organisations. Our goals include strategising on how to effectively market your website on the internet, to provide you with expert web design and development. Driven by values and working with ethics, Xicom Technology is passionate abosut solving business problems for you and your end users, efficiently and effectively. We offer full service strategic alliance for our clients who are looking for any kind of web and digital services. Our comprehensive strategies and solutions deliver measurable results that will grow your business and save you money. We employ the very latest trends and techniques in our design and development strategies. Our team comprises of some of the best creative minds and our vast experience enables us to create creative website designs for you that will help you stand out from the crowd. The team at Xicom Technologies is experienced in design and developing sites using the latest techniques like AJAX, Jquery, XML webservices and Flash AS3. Our development teams are fully capable of handling projects in Microsoft as well Open source technologies. Xicom Technologies is a website design and development company. We have developed customized and unique web solutions starting from simple corporate websites to ecommerce solutions, extensive web-based applications, CMS Development, etc across various industries. We have the expertise, experience and the ability to solve complex business problems by understanding your business goals and strategic &amp; marketing objectives by utilizing our technical knowledge, domain</p> </div>
+</div>
+<div id="post-143" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 28, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on Offshore Custom Web Application Development Services</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../offshore-custom-web-application-development-services/index.htm" title="Offshore Custom Web Application Development Services">Offshore Custom Web Application Development Services</a></h2>
+<div class="entry">
+<p>Custom web applications bring websites to life. From simple email forms to complete content management systems, we can turn your website into a valuable business tool by providing bespoke (custom) software and database solutions for the web, PDAs/handhelds, mobile phones and other devices. With our offshore custom web application development services, we offer complete service including consultation, equipment, development, security, deployment and maintenance. With our proven and practical standards of custom web application development, bringing you the right solution becomes a delightful experience. The following steps in our process making things easier to work with us: Some of the custom web application development services include: Content Management System (CMS). Shopping Cart applications with real time credit card processing. E Help desk management systems (CRM). Corporate Intranet solutions. Online Auctions. Online Exchanges. Document Managment solutions. Email Managment solutions. Data transfer solutions. The offshore custom web application development team utilizes some of the latest technologies to create web components, services, and databases that not only perform efficiently, but reliably and securely. See the range of tools we use to develop these applications. Xicom provides a broad range of web development services and application development services to help you harness the power of technology, consulting and maximize your online business investment. Visit us at www.xicom.biz to learn more about our company, services and capabilities.</p> </div>
+</div>
+<div id="post-139" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 28, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on CMS Development Using Xicom</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../cms-development-using-xicom/index.htm" title="CMS Development Using Xicom">CMS Development Using Xicom</a></h2>
+<div class="entry">
+<p>A Content management (CMS) helps you to simplify managing Website content by allowing content developers to publish content without demanding technical knowledge of HTML, FTP or Web page authoring tools. Macronimous provides Web based CMS tools for website owners with simple interfaces but with powerful features to make their web presence dynamic. We at Xicom Technologies have years of experience in developing both custom and Open source based CMS with wide options to choose the technology and the features. Custom CMS: Our web application development team provides CMS based on your requirements using ASP,ASP.NET, PHP or Java. We use globally accepted standards such as Secure Admin interface, JavaScript/Ajax based Editors, Design-content Separation with templates, user management and SEO friendliness (URL rewriting etc). Open source based CMS: We provide a wide range of Open source based CMSs. Our expert teams can build templates, Install the CMS application, customize features &amp; develop custom modules (Plug-ins), make the CMS driven sites SEO friendly, provide multi lingual support, integrate designs and maintain the architecture with necessary updates and version upgrades. We mainly focus on WordPress, Joomla, Magento, Smarty and Drupal. Xicom provides a broad range of web development services and application development services to help you harness the power of technology, consulting and maximize your online business investment. Visit us at www.xicom.biz to learn more about our company, services and capabilities.</p> </div>
+</div>
+<div id="post-136" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Oct 28, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on Web Site Development Process &#8211; The life-cycle steps</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../web-site-development-process-the-life-cycle-steps/index.htm" title="Web Site Development Process &#8211; The life-cycle steps">Web Site Development Process &#8211; The life-cycle steps</a></h2>
+<div class="entry">
+<p>Like the traditional software development, the process of web site development can also be divided into different life cycle steps. This can help to format the team effectively, and the standards and procedures can be adopted to achieve maximum quality. This article explains the steps of development which can be possibly arranged as a process of web engineering. This is just a guideline to help you, to know, how a process can be done. The steps may vary from application to application. A system development process can follow a number of standard or company specific frameworks, methodologies, modeling tools and languages. Software development life cycle normally comes with some standards which can fulfill the needs of any development team. Like software, web sites can also be developed with certain methods with some changes and additions with the existing software development process. Web sites will need quite frequent updations to keep them very fresh. In that case we need to do analysis again, and all the other life cycle steps will repeat. Bug fixes can be done during the time of maintenance. Once your web site is operational, ongoing promotion, technical maintenance, content management &amp; updating, site visit activity reports, staff training and mentoring is needed on a regular basis depend on the complexity of your web site and the needs within your organization. Xicom provides a broad range of web development and application development services to help you harness the power of technology, consulting and maximize your online business investment.</p> </div>
+</div>
+<div id="post-132" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 29, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on Business Software Development using Xicom Technologies</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../business-software-development-using-xicom-technologies/index.htm" title="Business Software Development using Xicom Technologies">Business Software Development using Xicom Technologies</a></h2>
+<div class="entry">
+<p>By getting a Business Software developed as per your need, you can fulfill the necessity of a tool or an application that is competent in organizing the vast peripherals of the business and regulating its silk smooth functioning. Today, a diverse range of companies, irrespective of their size and business types, are stressing upon the necessity of developing customized software that keeps a track of their functioning as well as automates many a time-intensive processes. While developing software for a particular client, Business Software development companies need to understand the business and analyze its various aspects. Any business establishment looking for customized software that fits perfectly to the needs of the business as well as to the budget, should select a company which is a specialist in the business of Business Software development. While a proven track record would establish points in favor of the ability of the company in delivering the products as per the requirements, a global reach would portray reasons on behalf of knowledge of the company in diverse business varieties and global professional demands. In the horde of thousand companies crowing about their superiority in the field of Business Software development, a company that is silently surpassing the limits of every competition while making a place for itself is one by the name of Xicom Technologies Ltd. And an ever increasing list of clientele proves many a positives about the company. Xicom Technologies Ltd. comes to offer you with a wholesome IT solution. It is engaged</p> </div>
+</div>
+<div id="post-129" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 29, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on Importance and Advantage of the Web Development Team</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../importance-and-advantage-of-the-web-development-team/index.htm" title="Importance and Advantage of the Web Development Team">Importance and Advantage of the Web Development Team</a></h2>
+<div class="entry">
+<p>Web development entails complicated and complex details, and before you could create a website; concepts, contents, maintenance, design should be well-thought of and well-planned. You have to have a proactive relationship and collaborate with your web developers, so that there would be no miscommunications and the concepts and designs will be as you specified. However what involves web development? Before anything else, web development is essential for those who want to be seen and heard all over the world particularly for businesses, because having a website would enable you to reach those customers without delays, and be available for 24 hours and seven days a week. The possibilities of the profits that you could gain just by having a web site are limitless. However, creating, updating and maintaining a website is not a walk in the park. For a simple web site it could be developed and maintained by a single individual, most businesses especially a large scale corporation however would prefer a reliable and credible web development team because creating and maintaining a website needs a group of people that are reliable, knowledgeable and proactive as well, and the advantage of a web development team over a single developer is that there would be no hassles and worries on your end if one of the team member is absent because it will be their responsibility and should be remedied as soon as they could. The number of members of a development team would depend on the extent and scope</p> </div>
+</div>
+<div id="post-126" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 28, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on Facts Regarding Custom Web Development</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../facts-regarding-custom-web-development/index.htm" title="Facts Regarding Custom Web Development">Facts Regarding Custom Web Development</a></h2>
+<div class="entry">
+<p>In last decades many of the new technology and open source software invented to optimize web development but inspite of that custom web development has its own popularity. Whenever a web developer starting to learn about developing websites then he or she start with custom web development. Custom web development is still the first choice of businessmen for their websites. There are so many benefits of custom web development for the developer as well as business. when you thinking of a website with the difference means website which is different from available form of websites then you need custom web development. When someone wants to develop his or her website from scratch then his or her first preference will be always custom web development. Custom web development is nothing but developing the website from scratch and an expert web developer can develop any of the form of website with custom web development. When you want to create a website which have new concept then custom web development helps you to develop this kind of website with different concepts. Now open source software are available for Ecommerce web sites but when you wish to develop a website without Ecommerce and other form of available websites then custom web development is only the way to develop your website. Custom web development has been growing in stature over the years. Broadly speaking, it refers to any activity undertaken for developing a website for the World Wide Web or an intranet. Both static as</p> </div>
+</div>
+<div id="post-123" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 28, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on Adopt E-commerce Solutions for Greater Exposure</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../adopt-e-commerce-solutions-for-greater-exposure/index.htm" title="Adopt E-commerce Solutions for Greater Exposure">Adopt E-commerce Solutions for Greater Exposure</a></h2>
+<div class="entry">
+<p>E-commerce is a very familiar term of today and it can be broadly defined as a market place on the net that enables financial transactions that include sales, marketing, online advertisements, insurance through an electronic medium. Taking a glance at the fast progress in the computer technologies, we can observe that computer networks have become the major element of the economic infrastructure. This has to a great extent lead to the expansion of collaborative working practices all over the world, improving and boosting the business management, regardless of its location. E-commerce Marketing makes real time communications and interchanges of data in a supply chain more effective and organized. It increases the brand visibility of a company and controls the inventory levels, as the supplies become more predictable. Recent studies have revealed that business owners with physical avenues like retail stores are giving it a second thought as the expenses are rising drastically compared to the revenues. The best option to promote their services and products are currently to adopt the benefits of e-commerce and maintain a direct link with their clients. This new concept of business has brought a new revolution and acts as an ideal platform to discover newer markets around the world. It is the best and cheapest medium of expanding your business and exposing people to various services at the click of a mouse button. The Returns of E-commerce Internet Solution Fewer Errors In the Transaction Process: Since e-commerce internet solution is totally based on technology, there</p> </div>
+</div>
+<div id="post-120" class="post">
+<div class="postMeta">
+<p class="container">
+<span class="date">Sep 28, 2009</span>
+<span class="categ-link"> <a href="../../index.htm" rel="category tag">Web Development</a> </span>
+<span class="comments"><span>Comments Off<span class="screen-reader-text"> on Web Application Development in The Era of Electronic Commerce</span></span></span>
+</p>
+</div>
+<h2><a href="../../../../web-application-development-in-the-era-of-electronic-commerce/index.htm" title="Web Application Development in The Era of Electronic Commerce">Web Application Development in The Era of Electronic Commerce</a></h2>
+<div class="entry">
+<p>With communication convergence business policies have undergone massive changes and web applications now an integral part of electronic commerce. Application development is the process of providing different business solutions, mainly for B2B i.e. business to business purposes. It should also be highlighted that there are several companies that are emphasizing on web application development for interacting with the clients. There are several ways of using web application development and across Australia; the leading companies are now after web application development for facilitating the targeted customers better. Rising popularity of web application influenced the IT companies to follow web applications in various business transactions. Compared to the traditional system, web application development can make a portal more alluring. Still there are certain parameters that need to be checked while initiating application development. In terms of security, there must be proper arrangement in the portals to facilitate proper secured payment options. Again there might be some confidential data meant for specific users. While creating an application development portal it is wise to maintain different password protected log-in potions to execute the security measures better. Data needs to be dumped in a central server instead of the individual computer. User requirement must be prioritized and then the planning can be made for customized solutions. In case of web application, it is not required to involve any additional hardware or software. So it is indeed system friendly and there is no necessary of configuring anything extra. Compared to the other applications, a custom web</p> </div>
+</div>
+<div id="paginateIndex" class="fix">
+<p><span class="left"><a href="../16/index.htm">Previous</a></span> <span class="right"><a href="../18/index.htm">Next</a></span></p>
+</div>
+</div>
+</div>
+<div class="col-sm-3 right-blog">
+<div class="secondaryColumn">
+<div id="text-10" class="widgetContainer widget_text"> <div class="textwidget"><div class="contact-bar">
+<h3>Looking for<br> Certified & <br>Experienced <br><span class="red-text">Developers</span></h3>
+<ul>
+<li>300+ Experts</li>
+<li>Flexible Engagement</li>
+<li>NDA Protection</li>
+<li>100% Satisfaction</li>
+<li>24X7 Support</li>
+<li>Moneyback Guarantee</li>
+</ul>
+<div class="contact-bttn">
+<a href="../../../../../contact/index.htm">Contact Now!</a>
+</div>
+</div></div>
+</div><div id="text-3" class="widgetContainer widget_text"><h3 class="widgetTitle">Xicom Technologies Ltd.</h3> <div class="textwidget">Founded in the year 2002, Xicom is a ISO 9001 certified software development company with a strong team of 300+ highly skilled IT experts, catering result-oriented and cost-competitive solutions to SME's across the world.</div>
+</div> <div id="recent-posts-3" class="widgetContainer widget_recent_entries"> <h3 class="widgetTitle">Recent Posts</h3> <ul>
+<li>
+<a href="../../../../why-php-is-still-good-for-web-development/index.htm">What Makes PHP a Still Good Choice For Web Development?</a>
+</li>
+<li>
+<a href="../../../../build-a-web-app/index.htm">Estimating the Web App Development Cost: How To Set the Budget Rightly?</a>
+</li>
+<li>
+<a href="../../../../businesses-should-invest-in-enterprise-applications/index.htm">Why Do Businesses Should Invest In Enterprise Application?</a>
+</li>
+<li>
+<a href="../../../../build-a-enterprise-mobile-application/index.htm">Build A Successful Enterprise Application For Your Business</a>
+</li>
+<li>
+<a href="../../../../understanding-the-app-budget-by-app-type/index.htm">Mobile App Development Cost: Understanding The App Budget By App Type in 2022</a>
+</li>
+<li>
+<a href="../../../../cost-to-create-a-game-app/index.htm">How Much Does It Cost To Develop a Gaming App?</a>
+</li>
+<li>
+<a href="../../../../build-a-food-delivery-app-like-ubereats/index.htm">How to build a food delivery app like Ubereats and Deliveroo</a>
+</li>
+<li>
+<a href="../../../../make-a-successful-messaging-app/index.htm">How To Make A Successful Messaging App In 2021?</a>
+</li>
+<li>
+<a href="../../../../cost-to-make-a-fitness-app/index.htm">How Much Does It Cost to Make a Fitness App</a>
+</li>
+<li>
+<a href="../../../../find-the-right-development-partner-in-san-francisco-usa/index.htm">How to find the right development partner in San Francisco, USA</a>
+</li>
+</ul>
+</div><div id="categories-3" class="widgetContainer widget_categories"><h3 class="widgetTitle">Blog Categories</h3> <ul>
+<li class="cat-item cat-item-198"><a href="../../../android-app-development/index.htm">Android App Development</a>
+</li>
+<li class="cat-item cat-item-80"><a href="../../../asp-net-development/index.htm">ASP.NET Development</a>
+</li>
+<li class="cat-item cat-item-384"><a href="../../../asp-net-development/asp-net-development-company/index.htm">ASP.NET Development Company</a>
+</li>
+<li class="cat-item cat-item-334"><a href="../../../big-data-analytics/index.htm">Big Data Analytics</a>
+</li>
+<li class="cat-item cat-item-290"><a href="../../../blockchain-development/index.htm">Blockchain Development</a>
+</li>
+<li class="cat-item cat-item-309"><a href="../../../cloud-computing/index.htm">Cloud Computing</a>
+</li>
+<li class="cat-item cat-item-127"><a href="../../../cms-development/index.htm">CMS Development</a>
+</li>
+<li class="cat-item cat-item-231"><a href="../../../cross-platform-app-development/index.htm">Cross Platform App Development</a>
+</li>
+<li class="cat-item cat-item-213"><a href="../../../ecommerce-development/index.htm">Ecommerce Development</a>
+</li>
+<li class="cat-item cat-item-388"><a href="../../../hire-app-developers/index.htm">hire app developers</a>
+</li>
+<li class="cat-item cat-item-382"><a href="../../../hire-magento-developer/index.htm">Hire Magento Developer</a>
+</li>
+<li class="cat-item cat-item-376"><a href="../../../hire-mobile-app-developer/index.htm">Hire Mobile App Developer</a>
+</li>
+<li class="cat-item cat-item-375"><a href="../../../hire-software-developer/index.htm">Hire software developer</a>
+</li>
+<li class="cat-item cat-item-294"><a href="../../../iot-development/index.htm">Internet of Things (IoT)</a>
+</li>
+<li class="cat-item cat-item-54"><a href="../../../ios-app-development/index.htm">iOS App Development</a>
+</li>
+<li class="cat-item cat-item-148"><a href="../../../java-development/index.htm">Java Development</a>
+</li>
+<li class="cat-item cat-item-383"><a href="../../../java-development/java-development-company/index.htm">Java development company</a>
+</li>
+<li class="cat-item cat-item-170"><a href="../../../magento-development/index.htm">Magento Development</a>
+</li>
+<li class="cat-item cat-item-53"><a href="../../../mobile-app-development/index.htm">Mobile App Development</a>
+</li>
+<li class="cat-item cat-item-391"><a href="../../../mobile-app-development-companies-in-india/index.htm">Mobile App Development Companies in India</a>
+</li>
+<li class="cat-item cat-item-377"><a href="../../../mobile-app-development/mobile-app-development-company/index.htm">Mobile app development company</a>
+</li>
+<li class="cat-item cat-item-389"><a href="../../../mobile-app-development-company-2/index.htm">mobile app development company</a>
+</li>
+<li class="cat-item cat-item-392"><a href="../../../mobile-app-development-company-india/index.htm">Mobile App Development Company India</a>
+</li>
+<li class="cat-item cat-item-387"><a href="../../../outsourcing-software-development-company/index.htm">outsourcing software development company</a>
+</li>
+<li class="cat-item cat-item-49"><a href="../../../php-development/index.htm">PHP Development</a>
+</li>
+<li class="cat-item cat-item-4"><a href="../../../software-development/index.htm">Software Development</a>
+</li>
+<li class="cat-item cat-item-426"><a href="../../../software-development-company-in-india/index.htm">software development company in india</a>
+</li>
+<li class="cat-item cat-item-3 current-cat"><a href="../../index.htm">Web Development</a>
+</li>
+<li class="cat-item cat-item-390"><a href="../../web-development-company/index.htm">web development company</a>
+</li>
+<li class="cat-item cat-item-14"><a href="../../../xicom-technologies/index.htm">Xicom Technologies / Reviews</a>
+</li>
+</ul>
+</div>
+</div> <div class="side-logos">
+<div class="half-logo clutch">
+<a href="https://clutch.co/profile/xicom-technologies">
+<img src="../../../../wp-content/themes/grid_focus/gridfocus/images/Mobile_App_Developers_2019.png" alt="Clutch">
+</a>
+</div>
+<div class="half-logo good_firms"><a target="_blank" href="https://www.goodfirms.co/companies/view/3935/xicom-technologies"><img style="width:240px" src="../../../../../badges/blue-button/app-development.svg" alt="GoodFirms Badge"></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<footer class="footer">
+<div class="inner-footer">
+<div class="container-fluid">
+<div class="accordion row col-sm-12" id="accordionExample">
+<div class="menu-listing col contact-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+Offices</button>
+<span class="footer-head hide-xs"><a href="../../../../../contact/index.htm">Offices</a></span>
+<div id="collapseOne" class="collapse vd show" aria-labelledby="headingOne" data-parent="#accordionExample">
+<p>
+18 Bartol Street #1155 <br>
+San Francisco, California 94133 <br>
+United States. <br>
+Phone +1.408.878.3255<br>
+</p>
+<p>
+<a class="address-map" href="https://goo.gl/maps/TQTzgzV8FP22" target="_blank">
+301-10 Opal Tower, Business Bay <br>
+Dubai, United Arab Emirates.</a><br>
+Phone +971.529144795<br>
+</p>
+<p>
+<a class="address-map" href="https://goo.gl/maps/TQTzgzV8FP22" target="_blank">
+C-1/134, Janak Puri, New Delhi<br>
+110058 India.</a><br>
+Phone +91.11.25502616<br>
+</p>
+</div>
+</div>
+<div class="menu-listing col service-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+Services</button>
+<span class="footer-head hide-xs"><a href="../../../../../services/index.htm">Services</a></span>
+<div id="collapseTwo" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../../../services/web-development/index.htm">Web Development</a></li>
+<li><a href="../../../../../services/mobile-app-development/index.htm">Mobile App Development</a></li>
+<li><a href="../../../../../services/software-development/index.htm">Software Development</a></li>
+<li><a href="../../../../../services/consulting/index.htm">IT Consulting </a></li>
+</ul>
+</div>
+</div>
+<div class="menu-listing col solution-col">
+<div class="inner-nav">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+Latest Thinking</button>
+<span class="footer-head hide-xs"><a href="../../../../../latest-thinking/index.htm">Latest Thinking</a></span>
+<div id="collapseThree" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../../../latest-thinking/big-data-analytics/index.htm">Big Data & Analytics</a></li>
+<li><a href="../../../../../latest-thinking/internet-of-things/index.htm">IoT</a></li>
+<li><a href="../../../../../latest-thinking/blockchain/index.htm">Blockchain</a></li>
+<li><a href="../../../../../latest-thinking/artificial-intelligence/index.htm">Artificial Intelligence</a></li>
+<li><a href="../../../../../latest-thinking/cloud-computing/index.htm">Cloud Computing</a></li>
+</ul>
+</div>
+</div>
+<div class="inner-nav mb0">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+Solutions</button>
+<span class="footer-head hide-xs"><a href="../../../../../solutions/index.htm">Solutions</a></span>
+<div id="collapseSix" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../../../solutions/technologies/index.htm">Technologies</a></li>
+<li><a href="../../../../../solutions/hire-developers/index.htm">Hire Developers</a></li>
+<li><a href="../../../../../solutions/outsourcing/index.htm">IT Outsourcing</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="menu-listing col company-col">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+Corporate
+</button>
+<span class="footer-head hide-xs"><a href="../../../../../corporate/index.htm">Corporate</a></span>
+<div id="collapseFour" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<ul class="footernav">
+<li><a href="../../../../../industries/index.htm">Industries </a></li>
+<li><a href="../../../../../case-studies/index.htm">Case Studies</a></li>
+<li><a href="../../../../../portfolio/index.htm">Portfolio</a></li>
+<li><a href="../../../../../contact/index.htm">Contact Us</a></li>
+<li><a href="../../../../../careers/index.htm">Careers</a></li>
+<li><a href="../../../../index.htm">Blog</a></li>
+<li><a href="../../../../../terms/index.htm">Terms of Use</a></li>
+<li><a href="../../../../../privacy/index.htm">Privacy Policy</a></li>
+<li><a href="../../../../../sitemap/index.htm">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="menu-listing col hvQues">
+<button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+Have Questions?
+</button>
+<span class="footer-head hide-xs">Have Questions?</span>
+<div class="phone-contact">Get in touch with us <a href="tel:+1.408.878.3255"><span class="number">+1.408.878.3255</span></a></div>
+<div id="collapseFive" class="collapse vd" aria-labelledby="headingOne" data-parent="#accordionExample">
+<div class="rowfull">
+Skype: <a href="skype:xicom.sales">xicom.sales</a><br>
+Email: <a href="../../../../../cdn-cgi/l/email-protection.html#5b283a373e281b233238343675393221"><span class="__cf_email__" data-cfemail="dba8bab7bea89ba3b2b8b4b6f5b9b2a1">[email&#160;protected]</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-footer">
+<div class="container-fluid">
+<div class="row copyright">
+<div class="col-sm-7 copy">
+<p> Copyright 2002-2023 Xicom Technologies Ltd. </p>
+<div class="rateit-wrap">
+<div class="overall social-foot">
+<div class="content" itemscope="" itemtype="http://schema.org/Product">
+<meta itemprop="description" content="Xicom is a ISO 9001 certified software development company providing custom, offshore software, mobile app and web application development services in Dubai, UAE.">
+<input type="hidden" name="post_id" id="rating_post_id">
+<input type="hidden" name="currentrate" id="currentrate" value="5835">
+<span> Rated <span id="ratingValue">4.8 </span>
+out of 5.0
+<meta itemprop="name" content="Software, Web, Mobile App Development Company">
+<link itemprop="image" href="https://www.xicom.ae/"> by </span>
+<span class="client-project" style="display: inline-block;">
+<div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope="">
+<meta itemprop="reviewCount" content="5835">
+<meta itemprop="ratingValue" content="4.8">
+</div>
+<div itemprop="review" itemtype="http://schema.org/Review" itemscope="">
+<div itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+<meta itemprop="name" content="Xicom">
+</div>
+<div itemprop="reviewRating" itemtype="http://schema.org/Rating" itemscope="">
+<meta itemprop="ratingValue" content="5">
+<meta itemprop="bestRating" content="5">
+</div>
+</div> <span id="totalClient"> 5835</span>+ Xicom clients on over 8350+ projects</span>
+<div itemprop="brand" itemtype="http://schema.org/Thing" itemscope="">
+<meta itemprop="name" content="Xicom">
+</div>
+</div>
+<input type="hidden" name="rating_page_url" value="mobile-app-development.php" id="rating_page_url">
+</div>
+</div>
+</div>
+<div class="col-sm-3 footer-logos">
+<a href="https://clutch.co/profile/xicom-technologies" class="f-logo cluth" target="_blank"> </a>
+<a href="https://www.goodfirms.co/companies/view/3935/xicom-technologies" class="f-logo good-firm" target="_blank"> </a>
+</div>
+<div class="col-sm-2 social-icons">
+<a href="https://www.facebook.com/xicomtechnologies" class="fb-icon" target="_blank"></a>
+<a href="https://www.twitter.com/xicomtech" class="tw-icon" target="_blank"></a>
+<a href="https://www.linkedin.com/company/xicom-technologies-ltd/" class="lnkd-icon" target="_blank"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="live-chat" id="status">
+<a href="#" class="blue-btn"> Live Chat </a>
+</div>
+
+<script data-cfasync="false" src="../../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="9bf0d0ed79f3c21c30eda77d-text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/573d53a6a8b2e6115f951546/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+<script type="9bf0d0ed79f3c21c30eda77d-text/javascript">
+Tawk_API = Tawk_API || {};
+Tawk_API.onStatusChange = function (status){
+
+if(status === 'online')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+else if(status === 'away')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+else if(status === 'offline')
+{
+document.getElementById('status').innerHTML = '<a href="javascript:void(Tawk_API.toggle())" class="livechat"><i class="blue-btn"></i></a>';
+}
+};
+Tawk_API.onOfflineSubmit = function(data){ 
+window.location= document.location.origin + "/contact/thanks.html"; 
+};
+Tawk_API.onChatStarted = function(){
+};
+</script>
+
+</footer>
+<script type="9bf0d0ed79f3c21c30eda77d-text/javascript" src="../../../../wp-includes/js/wp-embed.min.js?ver=5.1.16"></script>
+<script src="../../../../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="9bf0d0ed79f3c21c30eda77d-|49" defer=""></script></body>
+</html>
